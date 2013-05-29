@@ -1,0 +1,568 @@
+﻿hebrew_name	english_name	category	symptom	ICD9Code
+יעוץ כללי לא מוגדר	"Other counseling, not elswhere classified"	כללי	NULL	V65.4
+יעוץ כללי	General counseling and advise	כללי	NULL	V25.0
+מחלה במשפחה	Health prblem within family	כללי	NULL	V61.4
+בדיקת מעקב	Follow-up examination	כללי	NULL	V67
+אין מחלה	No Disease	כללי	NULL	D01
+חום	Fever	כללי	TRUE	780.6
+התייבשות	"Fluid Intake, decreased / dehydration"	כללי	NULL	276.51
+חיסון	Need for Immunization	כללי	NULL	V03-V06
+אלרגיה	Allergic reaction NOS	כללי	TRUE	995.3
+אלרגיה למוצרי חלב	Allergy to milk products	כללי	TRUE	V15.02
+אלרגיה לתרופות	Allergy to drug properly administered	כללי	TRUE	995.2
+כאב	Pain	כללי	TRUE	338
+כאב חריף	Acute pain	כללי	TRUE	338.1
+כאב כרוני	Chronic pain	כללי	TRUE	338.2
+כאב כללי	Generalized pain	כללי	TRUE	780.96
+דום נשימה בשינה	Unspecified sleep apnea	כללי	NULL	780.57
+חולשה ועייפות	Malaise and fatigue	כללי	TRUE	780.7
+סינקופה / אבוד הכרה	Syncope and collapse / fainting	כללי	TRUE	780.2
+עליה במשקל	Abnormal weight gain	כללי	TRUE	783.1
+השמנה	Obesity	כללי	NULL	278
+השמנה חולנית	Morbid obesity	כללי	NULL	278.01
+עודף משקל	Overweight	כללי	NULL	278.02
+ירידה במשקל	Loss of weight	כללי	TRUE	783.21
+הגדלת בלוטות לימפה	Enlargement of lymph nodes	כללי	TRUE	785.6
+דלקת בלוטת לימפה	Unspecified lymphadenitis	כללי	TRUE	289.3
+היפותרמיה	Hypothermia	כללי	TRUE	780.56
+שוק אנפילקטי	Other anaphylactic shock	חרום	NULL	995
+חנק מגוף זר	Choking / Asphyxia due to foreign body	חרום	TRUE	993.1
+אבדן הכרה	Syncope and collapse	חרום	TRUE	780.2
+הרעלה	Poisoning by external substunces	חרום	NULL	E860-E869
+מינון יתר	Overdose accidental	חרום	NULL	E850-E858
+נסיון אבדני	Sucicidal Attempt	חרום	NULL	E950-E959
+פרכוס	Convulsions	חרום	NULL	780.3
+פציעה	Injury	חבלה	NULL	V15.5
+פצע / חתך	Laceration / cut	חבלה	TRUE	870-879
+צליפת שוט צוואר	Whiplash Injury	חבלה	NULL	847
+זעזוע מוח	Concussion	חבלה	NULL	850
+בדיקת הריון	"Pregnancy examination or test, pregnancy unconfirmed"	הריון	NULL	V72.40
+הריון תקין	Normal pregnancy	הריון	NULL	V22
+דימום בהריון מוקדם	Hemorrhage in early pregnancy	הריון	TRUE	640
+התכווצויות בהריון	Abnormal uterine contractions	הריון	TRUE	763.7
+הקאות בהריון	Hyperemesis gravidarum	הריון	TRUE	643
+סיבוכי הריון כללי	Other specified complications of pregnancy	הריון	NULL	646
+זיהום דרכי שתן בהריון	Infections of genitourinary tract in pregnancy	הריון	NULL	646.6
+הפלה ספונטנית	Spontaneous abortion	הריון	NULL	634
+הפלה missed	Missed abortion	הריון	NULL	632
+הפלות חוזרות	Habitual aborter	הריון	NULL	646.3
+הריון IVF	Pregnancy resulting from IVF	הריון	NULL	V23.85
+הריון בר סיכון	Other high-risk pregnancy	הריון	NULL	V23.89
+הריון אקטופי	Ectopic pregnancy	הריון	NULL	633
+מולה	Hydatidiform mole	הריון	NULL	630
+חום בילוד	Neonatal fever	תינוק	TRUE	778.4
+הקאה/פליטה	Regurgitation of food	תינוק	TRUE	779.3
+בעיות האכלה בתינוק	Feeding problems in newborn	תינוק	TRUE	779.3
+צהבת ילוד	"Hemolytic disease of fetus or newborn, due to isoimmunization"	תינוק	NULL	773
+טראומה בלידה	Birth trauma	תינוק	NULL	767
+RDS	"Respiratory distress syndrome, baby"	תינוק	NULL	769
+בכי	Excessive crying of infant (baby)	תינוק	TRUE	780.92
+סטרידור / שעול נבחני	Stridor	תינוק	TRUE	786.1
+פריחה / דלקת שמחתולים	Diaper or napkin rash	תינוק	TRUE	691
+התכווצויות חום	Febrile convulsions	תינוק	TRUE	780.31
+עצירת נשימה בתינוק	Breath-Holding Spell	תינוק	NULL	786.9
+בעיות תזונה ועיכוב צמיחה בתינוק	Slow fetal growth and fetal malnutrition	תינוק	TRUE	764
+העדר שגשוג בילד	Failure to thrive	תינוק	NULL	783.41
+עכוב בהשגת אבני דרך	Delayed milestones	תינוק	NULL	783.42
+מומים מולדים	Congenital anomalies	תינוק	NULL	740-759
+סיבוכי הריון עקב מחלת אם	Fetus or newborn affected by maternal complications of pregnancy	תינוק	NULL	761
+קומה נמוכה	Short stature	תינוק	NULL	783.43
+כאב ראש	Headache	ראש	TRUE	784
+כאב עין	Pain in or around eye	ראש	TRUE	379.91
+צריבת עין / עין אדומה	Eye Red/Itch	ראש	TRUE	373
+גוף זר בעין	Eye Foreign Body	ראש	TRUE	930.9
+כאבי אוזן	Earache / Otalgia	ראש	TRUE	388.7
+דלקת אוזן תיכונה	Otitis media	ראש	NULL	381.4
+דלקת אוזן תיכונה מוגלתית	Acute suppurative otitis media	ראש	TRUE	382
+דלקת אוזן חיצונית	Otitis externa (acute)	ראש	NULL	380.1
+נזלת אלרגית	Allergic Rhinitis	ראש	NULL	477
+דימום מהאף	Nosebleed \ epistaxis	ראש	TRUE	784.7
+דלקת סינוסים חריפה	Sinusitis acute	ראש	NULL	461
+דלקת סינוסים כרונית	Sinusitis chronic	ראש	NULL	473
+כאבי סינוסים	Symptoms/compaints sinus (incl pain)	ראש	TRUE	R09
+כאבי גרון	Sore Throat	ראש	TRUE	462
+"תלונות פה, לשון, שפתיים"	Symp/compl of mouth; tongue; lip	ראש	TRUE	D20
+ריח פה	Halitosis	ראש	TRUE	784.99
+כאבי שיניים	Toothache	ראש	TRUE	525.9
+דלקת חניכיים	Gingivitis	ראש	NULL	523
+אפטות	Oral aphthae/Aphthous stomatitis	ראש	NULL	528.2
+גניחת דם	Hemoptysis	ראש	TRUE	786.3
+נפיחות צוואר	"Swelling, mass, or lump in head and neck"	ראש	TRUE	784.2
+כאבי חזה	Chest Pain	בית החזה	TRUE	786.5
+שעול	Cough	בית החזה	TRUE	786.2
+צפצופים	Wheezing	בית החזה	NULL	786
+תסמונת בית חזה	Chest wall syndrome	בית החזה	NULL	786.5
+תלונות בית חזה	Chest symptoms/complaints	בית החזה	TRUE	L04
+כאבי שדיים	Mastodynia / breast pain	בית החזה	TRUE	611.71
+גינקומסטיה	Hypertrophy of breast / gynecomastia	בית החזה	NULL	611.1
+דפיקות לב	Palpitations	בית החזה	TRUE	785.1
+שיהוקים	Hiccough	בית החזה	TRUE	786.8
+כאבי בטן	Abdominal Pain	בטן	TRUE	789
+בטן חריפה	Acute abdomen	בטן	NULL	789
+נפיחות בטן / גזים	Flatulence / bloating	בטן	TRUE	787.3
+עווית כלייתית	Renal colic	בטן	TRUE	788
+עצירות	Constipation	בטן	TRUE	564
+שלשול	Diarrhea	בטן	TRUE	92
+בחילה	Nausea	בטן	TRUE	D09
+הקאה	Vomiting - emesis	בטן	TRUE	787
+צרבת	Heartburn	בטן	TRUE	787.1
+בקע סרעפתי	Hiatus / Diaphragmatic hernia	בטן	NULL	553.3
+רפלוקס קיבתי ושטי	Reflux esophageal	בטן	NULL	530.1
+קיב קיבה	Gastric ulcer	בטן	NULL	531
+כיב תריסריון	Duodenal ulcer	בטן	NULL	532
+אבנים בכיס מרה	Cholelithiasis	בטן	NULL	574.2
+הגדלת כבד / הפטומגליה	Hepatomegaly	בטן	NULL	789.1
+הגדלת טחול / ספלנומגיליה	Splenomegaly	בטן	NULL	789.2
+דלקת תוספתן	Appendicitis	בטן	NULL	540
+כריתת תוספתן	Appendectomy	בטן	NULL	Z470
+דלקת כיבית של המעי	Ulcerative colitis	בטן	NULL	556
+מחלת קרוהן	Crohn's disease	בטן	NULL	555.9
+מחלת צליאק	Celiac disease	בטן	NULL	579
+פוליפים במעי הגס	Polyp colon	בטן	NULL	211.3
+בקע טבורי	Umbilical hernia	בטן	NULL	553.1
+בקע מפשעה	Inguinal hernia	בטן	NULL	550
+בקע ונטראלי	Ventral hernia	בטן	NULL	553.2
+דלקת הצפק	Peritonitis	בטן	NULL	567
+מיימת	Ascites	בטן	NULL	789.5
+אי שליטה ביציאות	Incontinence of feces	בטן	NULL	787.6
+הפרעה בבליעה	Dysphagia	בטן	NULL	787.2
+טנזמוס	Tenesmus (rectal)	בטן	NULL	787.99
+שנוי בהרגלי היציאות	Change in bowel habits	בטן	NULL	787.99
+תולעים	Pinworms / oxyuriasis	בטן	NULL	127.4
+כאב במפשעה	Groin Pain	גניטליה	TRUE	789
+כאבי מחזור	Dysmenorrhea	גניטליה	TRUE	625.3
+דמם וסתי מוגבר	Menorrhagia	גניטליה	TRUE	626.2
+כאבי השתנה	Dysuria	גניטליה	TRUE	788.1
+גרד וגינלי	Vaginal Itching	גניטליה	TRUE	698.1
+דמם נרתיקי	Vaginal bleeding	גניטליה	TRUE	623.6
+שרירן / מיומה של הרחם	Uterine leiomyoma	גניטליה	NULL	218
+אל וסת	Menopause	גניטליה	NULL	627
+תסמונת אל וסת	Menopausal symptoms	גניטליה	TRUE	627
+כאבי מחזור	Menstrual pain	גניטליה	TRUE	X02
+פפילומה	Papilloma	גניטליה	NULL	216.9
+הרפס גניטלי	Herpes genitalis	גניטליה	NULL	54.1
+חוורון	Pallor	עור	TRUE	782.61
+בצקת	Edema	עור	TRUE	782.3
+כחלון פריפרי	Cyanosis	עור	TRUE	782.5
+פלאשינג	Flushing	עור	NULL	782.62
+צהבת	Jaundice	עור	TRUE	782.4
+הפרעה בתחושה	Disturbance of skin sensation / dysesthesia	עור	TRUE	782
+נפיחות מקומית	"Localized superficial swelling, mass, or lump"	עור	TRUE	782.2
+נשיכת חיה	Animal bite NOS	עור	NULL	E906.5
+עקיצת חרק	Insect bite	עור	NULL	910.5
+כוויה	Burn	עור	NULL	949
+כויה דרגה I	Erythema [first degree]	עור	NULL	949.1
+כויה דרגה II	"Blisters, epidermal loss [second degree]"	עור	NULL	949.2
+כויה דרגה III	Full-thickness skin loss [third degree NOS]	עור	NULL	949.3
+פריחה	Rash and other nonspecific skin eruption [exanthen]	עור	TRUE	782.1
+אורטיקריה	Urticaria	עור	TRUE	708
+אימפטיגו	Impetigo	עור	NULL	684
+זיהום בעור	Skin infection NOS	עור	TRUE	686.9
+פטרת העור	Dermatophytosis	עור	NULL	110
+פורונקל	Carbuncle and furuncle/boil	עור	NULL	680
+אקזמה	Eczema NOS	עור	TRUE	692.9
+דרמטיטיס אטופית	Atopic dermatitis	עור	NULL	691.8
+דרמטיטיס ממגע	Contact dermatitis	עור	NULL	692
+דרמטיטיס לאחר הקרנות	Radiation dermatitis	עור	NULL	692.8
+אקנה	Acne	עור	NULL	706.1
+ורוקה	Viral warts	עור	NULL	78.1
+פיטיריאזיס ורסיקולור	Pityriasis versicolor	עור	NULL	111
+פסוריאזיס	Psoriasis	עור	NULL	696
+פמפיגוס	Pemphigus	עור	NULL	694.4
+פטרת צפרניים	Onychomycosis	עור	NULL	110.1
+הרפס סימפלקס	Herpes simplex	עור	NULL	54
+שלבקת חוגרת	Herpes zoster	עור	NULL	53
+כאבי שרירים	Muscle Pain / Myalgia	שריר ושלד	TRUE	729.1
+חולשת שרירים	Muscle weakness (generalized)	שריר ושלד	TRUE	728.87
+כאבים בצואר	Cervicalgia	שריר ושלד	TRUE	723.1
+סימפטומים קשורים לכתף	Shoulder Symptoms/Compleints	שריר ושלד	TRUE	L08
+כאבים בגפה	Pain in limb	שריר ושלד	TRUE	729.5
+כאבים בכתף	Shoulder pain	שריר ושלד	TRUE	723.1
+כאבים בפרק ירך	Hip Pain	שריר ושלד	TRUE	719.4
+סימפטומים קשורים לברך	Knee Symptoms/Compleints	שריר ושלד	TRUE	719.4
+כאבים בברך	Knee pain	שריר ושלד	TRUE	719.4
+כאבים בקרסול	Ankle Symptoms/Compleints	שריר ושלד	TRUE	719.4
+כאב גב	Backache	שריר ושלד	TRUE	724.5
+כאב צוואר	Cervicalgia	שריר ושלד	TRUE	723.1
+כאבי גב עליון	Upper Back Pain	שריר ושלד	TRUE	724.5
+כאבי גב תחתון	LBP	שריר ושלד	TRUE	724.2
+סיאטיקה	Sciatic Neuropathy	שריר ושלד	NULL	724.3
+צוואר תפוס	Torticollis	שריר ושלד	TRUE	723.5
+כאב מוקרן	Radicular Pain	שריר ושלד	TRUE	729.2
+כאבים בכף הרגל	Pain Foot	שריר ושלד	TRUE	840
+כאבי פרקים	Arthralgia	שריר ושלד	TRUE	719.4
+כאבים בפרקים קטנים	Arthralgia Small joints	שריר ושלד	TRUE	719.4
+כאבים בפרקים גדולים	Arthralgia Large joints	שריר ושלד	TRUE	719.4
+כאבים בפרקי האצבעות	Arthralgia fingers	שריר ושלד	TRUE	719.4
+כאבים בבית חזה	Chest Pain	שריר ושלד	TRUE	786.5
+סקוליוזיס	Scoliosis	שריר ושלד	NULL	737.3
+תסמונת השרוול המסובב	Rotator cuff syndrome	שריר ושלד	TRUE	726.1
+נקע/חשד לנקע	Sprain	שריר ושלד	TRUE	786.5
+שבר בגולגולת	Fracture skull	שריר ושלד	NULL	800
+שבר עצם האף	Fracture nose	שריר ושלד	NULL	802
+"שבר בחוליות ע""ש"	Fracture vevtebral column	שריר ושלד	NULL	805
+שבר עצם בריח	Fracture clavicle	שריר ושלד	NULL	810
+שבר עצם הזרוע	Fracture humerus	שריר ושלד	NULL	812
+שבר מרפק	Fracture elbow	שריר ושלד	NULL	812.4
+שבר עצמות האמה	Fracture radius and ulna	שריר ושלד	NULL	813
+שבר עצמות כף יד	Fracture carpal bones	שריר ושלד	NULL	814
+שבר עצמות כף יד	Fracture metacarpal	שריר ושלד	NULL	815
+שבר בצלע	Fracture rib	שריר ושלד	NULL	807
+שבר באגן	Fracture pelvis	שריר ושלד	NULL	808
+שבר צוואר הירך	Fracture hip	שריר ושלד	NULL	820
+שבר עצם הירך	Fracture femur	שריר ושלד	NULL	821
+שבר עצם הפיקה	Fracture patella	שריר ושלד	NULL	822
+שבר טיביה	Fracture Tibia	שריר ושלד	NULL	823
+שבר פיבולה	Fracture fibula	שריר ושלד	NULL	823.1
+שבר שתי עצמות השוק	Fracture tibia and fibula	שריר ושלד	NULL	823.2
+שבר עצמות כף רגל	Fracture tarsal bones	שריר ושלד	NULL	825
+שבר לחץ	Stress fracture	שריר ושלד	NULL	V13.52
+שבר אצבע	Fracture finger	שריר ושלד	NULL	816
+שבר לא מאוחה	Fracture malunion	שריר ושלד	NULL	733.8
+בעיות בהליכה	Gait disorders	שריר ושלד	TRUE	781.2
+דלקת פרקים	Arthritis acute	שריר ושלד	NULL	716.9
+ראומטויד ארטריטיס	Rheumatoid Arthritis	שריר ושלד	NULL	714
+אוסטיוארטריטיס	Osteoarthritis	שריר ושלד	NULL	719.4
+אוסטאופורוזיס	Osteoporosis	שריר ושלד	NULL	733
+פולימיאלגיה ראומטיקה	Polymyalgia Rheumatica	שריר ושלד	NULL	725
+כאב גב	Backache	עמוד שדרה	TRUE	724.5
+כאב צוואר	Cervicalgia	עמוד שדרה	TRUE	723.1
+כאב גב תחתון	Low Back Pain	עמוד שדרה	TRUE	724.5
+שבר בחוליה	Fracture of Vertebra	עמוד שדרה	NULL	805
+ספונדילוליסטזיס	Spondylolisthesis	עמוד שדרה	NULL	738.4
+ספונדילוליזיס	Spondylolysis	עמוד שדרה	NULL	722.6
+פריצת דיסק צווארי	Herniated disc Cervical	עמוד שדרה	NULL	722
+פריצת דיסק חזי	Herniated discThoracic	עמוד שדרה	NULL	722.1
+פריצת דיסק מתני	Herniated disc Lumbar	עמוד שדרה	NULL	722.1
+עקמת	Scoliosis / kyphoscoliosis	עמוד שדרה	NULL	737.3
+עקשת	Kyphosis	עמוד שדרה	NULL	737.41
+תסמונת מנהרת כף היד	Carpal Tunnel Syndrome	גפיים עליונות	NULL	354
+מרפק טניס	Lateral Epicondylitis	גפיים עליונות	NULL	726.3
+מרפק עקרת הבית	Medial Epicondylitis	גפיים עליונות	NULL	726.3
+בורסיטיס של המרפק	Olecranon Bursitis	גפיים עליונות	NULL	726.3
+מחלת דה קוורווין	De Quervain disease	גפיים עליונות	NULL	727
+סימפטומים של שורש כף יד	Wrist symtoms/complaints	גפיים עליונות	TRUE	L11
+בורסיטיס	Bursitis all sites	גפיים עליונות	NULL	727.3
+סיאטיקה / לומבגו	Siatica / sciatia	גפיים תחתונות	NULL	724.3
+בורסיטיס הירך	Bursitis Hip	גפיים תחתונות	NULL	726.5
+כאבי ברכיים	Knee symptoms/complaints	גפיים תחתונות	TRUE	L15
+נקע ברך	Sprain knee	גפיים תחתונות	TRUE	844
+ציסטה על שם בייקר	Baker's cyst	גפיים תחתונות	NULL	727.51
+אוסגוד שלאטר	Osgood Schlatter's disease	גפיים תחתונות	NULL	732.4
+קרע שריר	"Rupture of muscle, nontraumatic"	גפיים תחתונות	NULL	728.83
+אי יציבות קרסול	Ankle instability	גפיים תחתונות	NULL	718.8
+ורידים מורחבים / דליות	Varicose veins	גפיים תחתונות	NULL	454
+נקע קרסול	Sprain ankle	גפיים תחתונות	TRUE	845
+פלנטר פסציאייטיס	Plantar Fesciitis	גפיים תחתונות	NULL	728.7
+שושנה	Erysipelas	גפיים תחתונות	NULL	35
+צפצופים	Wheezing	נשימה	TRUE	786.07
+שיעול	Cough	נשימה	TRUE	786.2
+שיעול יבש	Dry Cough	נשימה	TRUE	786.2
+שיעול ליחתי	Productive Cough	נשימה	TRUE	786.2
+שיעול דמי	Blood in sputum / hemoptysis	נשימה	TRUE	786.3
+נזלת	Rhinitis	נשימה	TRUE	305.1
+נזלת אלרגית	Allergic Rhinitis	נשימה	NULL	477
+צרידות	Hoarseness	נשימה	TRUE	784.49
+קוצר נשימה	Dyspnea	נשימה	TRUE	786
+סטרידור	Stridor	נשימה	TRUE	786.1
+אסטמה	Asthma	נשימה	NULL	461.9
+ברונכיטיס חריפה	Acute bronchitis	נשימה	NULL	466
+ברונכיטיס כרונית	Chronic Bronchitis (COPD)	נשימה	NULL	491
+גודש ראתי	Pulmonary congestionand hypostasis	נשימה	NULL	514
+בצקת ריאות	"Acute edema of lung, unspecified"	נשימה	NULL	518.4
+בצקת ריאות קרדיוגנית	"Pulmonary edema, cardiogenic"	נשימה	NULL	428.1
+דלקת דרכי נשימה עליונות	URTI Upper respiratory tract	נשימה	NULL	465
+מעשן כבד	Heavy Smoker	נשימה	NULL	493
+מחלת לב איסכמית	Ischemic heart disease	לב וכלי דם	NULL	V17.3
+תעוקת חזה	Angina Pectoralis	לב וכלי דם	NULL	413.9
+ת.ח. בלתי יציבות	Unstable A.P.	לב וכלי דם	NULL	411.1
+מצב לאחר צינתור/מעקפים	S/P Coronary Angioplasty/Bypass	לב וכלי דם	NULL	414
+אי ספיקת לב	Congestive Heart Failure	לב וכלי דם	NULL	428
+קוצר נשימה במאמץ	Exercise Dyspnea	לב וכלי דם	TRUE	786
+בצקת ברגליים	Edema of legs	לב וכלי דם	TRUE	782.3
+הפרעות קצב	Arrythmias	לב וכלי דם	NULL	427.9
+דופק לא סדיר/ פלפיטציות	Irregular Beats/Palpitations	לב וכלי דם	NULL	785.1
+טכיקרדיה	Tachycardia	לב וכלי דם	NULL	785
+ברדיקרדיה	Sinus bradycardia NOS	לב וכלי דם	NULL	427.89
+מחלת הקוצב	Sick sinus syndrome	לב וכלי דם	NULL	427.81
+פרפור עלייתי	Atrial Fibrillation	לב וכלי דם	NULL	427.31
+רפרוף פרוזדורים	Atrial Flutter	לב וכלי דם	NULL	427.32
+מחלה מסתמית	Valvular Heart Disease	לב וכלי דם	NULL	746.9
+פגם מחיצתי בין חדרי	Ventricular septal defect	לב וכלי דם	NULL	745.4
+פגם מחיצתי בין עלייתי	Ostium secundum type atrial septal defect	לב וכלי דם	NULL	745.5
+מחלת לב ראומטית	Rheumatic Heart Disease	לב וכלי דם	NULL	398.9
+מחלת לב מולדת	Congenital Heart Diesease	לב וכלי דם	NULL	746.9
+יתר לחץ דם ראשוני	Essential Hypertension	לב וכלי דם	NULL	401
+יתר לחץ דם משני	Secondary Hypertension	לב וכלי דם	NULL	405
+תת לחץ דם	Chronic hypotension	לב וכלי דם	NULL	458.1
+יתר לחץ דם ראתי	"Pulmonary hypertension, secondary"	לב וכלי דם	NULL	416.8
+אטרוסקלרוזיס כלילית	Coronary atherosclerosis	לב וכלי דם	NULL	414
+אוטם חריף	Acute MI	לב וכלי דם	NULL	410
+אוטם כלילי קדמי	Anterolateral MI	לב וכלי דם	NULL	410
+אוטם כלילי תחתון	Inferior MI	לב וכלי דם	NULL	410.4
+תסמונת לב כלילית חדידה	Acute Coronary Syndrome	לב וכלי דם	NULL	411.81
+אי ספיקת מסתם מיטראלי	Mitral insufficiency	לב וכלי דם	NULL	424
+אי ספיקת מסתם טריקוספידלי	Tricuspid insufficiency	לב וכלי דם	NULL	397
+אי ספיקת מסתם אאורטלי	Aortic insufficiency	לב וכלי דם	NULL	424.1
+אי ספיקת מסתם פולמונרי	Pulmonary insuffiency	לב וכלי דם	NULL	746
+הצרות מסתם מיטראלי	Mitral stenosis	לב וכלי דם	NULL	394
+הצרות מסתם טריקוספידלי	Tricuspid stenosis	לב וכלי דם	NULL	397
+הצרות מסתם אאורטלי	Aortic stenosis	לב וכלי דם	NULL	395
+הצרות מסתם פולמונרי	Pulmonary artery stenosis congenital	לב וכלי דם	NULL	746
+אי ספיקת לב בגודש	Congestive heart failure	לב וכלי דם	NULL	428
+הפרעת קצב	"Arrhythmia, NOS"	לב וכלי דם	NULL	427.9
+פרפור פרוזדורים	Atrial Fibrillation	לב וכלי דם	NULL	427.3
+פרפור חדרים	Ventricular Fibrillation	לב וכלי דם	NULL	427.4
+חסם הולכה ימני שלם/בלתי שלם	RBBB	לב וכלי דם	NULL	426.4
+חסם הולכה שמאלי	LBBB	לב וכלי דם	NULL	426.2
+חסם הולכה שמאלי קדמי	LAHB	לב וכלי דם	NULL	426.2
+חסם הולכה שמאלי אחורי	LPHB	לב וכלי דם	NULL	426.2
+טכיקרדיה על חדרית	Supraventricular tachycardia	לב וכלי דם	NULL	427.89
+פעימות מוקדמות עלייתיות	PAC	לב וכלי דם	NULL	427.6
+פעימות מוקדמות חדריות	PVC	לב וכלי דם	NULL	427.6
+מחלת הקוצב	SSS	לב וכלי דם	NULL	427.8
+מחלת כלי דם פריפרית	Peripheral vascular disease	לב וכלי דם	NULL	443
+צליעה לסירוגין	Intermittent Claudication	לב וכלי דם	TRUE	443.9
+טרומבופלביטיס	Thrombophlebitis	לב וכלי דם	NULL	451
+ורידים מורחבים	Varicose Veins	לב וכלי דם	TRUE	454
+פקקת ורידים עמוקים	DVT / Deep Vein Thrombosis	לב וכלי דם	NULL	453.4
+כאבי בטן	Abdominal pain	עיכול	TRUE	789
+כאבי בטן חוזרים	Recurrent Abdominal Pain	עיכול	TRUE	789
+בחילה	Nausea	עיכול	TRUE	D09
+הקאות	Vomiting	עיכול	TRUE	787
+שלשולים	Diarrhea	עיכול	TRUE	92
+עצירות	Constipation	עיכול	TRUE	564
+צרבת	Heartburn	עיכול	TRUE	787.1
+גזים מרובים	Abdominal Gas	עיכול	TRUE	787.3
+חוסר תיאבון	Loss of Appetite	עיכול	TRUE	783
+יציאות דמיות	Rectal Bleeding	עיכול	TRUE	669.3
+גרד רקטלי	Rectal Itch	עיכול	TRUE	698
+רפלוקס	Reflux Esophageal	עיכול	NULL	530.1
+גסטריטיס	Gastritis	עיכול	NULL	535
+גסטריטיס הליקובקטר	Gastritis Helicobacter	עיכול	NULL	535.4
+מחלה פפטית	Peptic Disease	עיכול	NULL	533
+כיב קיבה	Gastric Ulcer	עיכול	NULL	531
+כיב תריסריון	Duodenal Ulcer	עיכול	NULL	532
+חסימת מעיים	Intestinal obstruction	עיכול	NULL	560
+מחלה דלקתית כרונית של המעי	Inflammatory Bowel Disease	עיכול	NULL	558.9
+אולצרטיב קוליטיס	Ulcerative Colitis	עיכול	NULL	556
+מחלת קרוהן	Crohn's Disease	עיכול	NULL	555.9
+תסמונת מעי רגיש	Irritable Bowel Disease	עיכול	NULL	564.1
+פוליפים במעי הגס	Colonic polyps benign	עיכול	NULL	211.3
+סעיפי מעי	Diverticulosis	עיכול	NULL	562.1
+דלקת סעיפי המעי	Diverticulitis	עיכול	NULL	562.1
+טחורים	Hemorrhoids	עיכול	NULL	455
+אבני צואה	Fecal impaction	עיכול	TRUE	560.3
+אי שליטה ביציאות	Fecal incontinence	עיכול	TRUE	787.6
+דלקת חריפה של המעי	AGE Acute Gastroenteritis	עיכול	NULL	91
+אוקסיוריאזיס	Oxyuriasis	עיכול	NULL	127.4
+תולעים	Worms	עיכול	NULL	128.9
+כאב במתן שתן	Dysuria	מין ושתן	TRUE	788.1
+השתנה מרובה	Polyuria	מין ושתן	TRUE	788.42
+תכיפות מתן שתן	Urinary frequency	מין ושתן	TRUE	600
+דחיפות במתן שתן	Urinary urgency	מין ושתן	TRUE	788.63
+שארית שתן	Urinary retention	מין ושתן	TRUE	788.30-788.39
+קושי במתן שתן	Difficulty Starting to Urinate / hesitancy	מין ושתן	TRUE	788.6
+אי שליטה במתן שתן	Urinary Incontinence	מין ושתן	TRUE	788.43
+דליפת שתן במאמץ	Stress Incontience fenale	מין ושתן	TRUE	625.6
+אוליגוריה ואנאוריה	Oliguria and anuria	מין ושתן	TRUE	788.5
+חסימת דרכי שתן	Urinary obstruction	מין ושתן	TRUE	599.69
+אצירת שתן	Urine retention	מין ושתן	TRUE	788.2
+השתנה לילית	Nocturia	מין ושתן	TRUE	788.43
+המטוריה	Hematuria	מין ושתן	TRUE	599.7
+הפרשה מאורטרה	Urethral discharge	מין ושתן	TRUE	788.7
+היפרפלזיה של הערמונית	Hyperplasia of prostate	מין ושתן	NULL	600
+עווית כלייתית	Renal colic	מין ושתן	NULL	788
+דלקת בדרכי השתן	UTI	מין ושתן	NULL	595
+דלקת בשלפוחית השתן	Cystitis	מין ושתן	NULL	595
+פצע בפין	Ulcer penis	מין ושתן	TRUE	607.2
+פצע בנרתיק	Vaginal laceration non delivery	מין ושתן	TRUE	623.4
+הפרשה מהנרתיק	Vaginal Dischage	מין ושתן	TRUE	623.5
+גרד נרתיקי	Vaginal Itch	מין ושתן	TRUE	698.1
+פטרת בנרתיק	Vaginitis Fungal	מין ושתן	NULL	112
+צניחת רחם	Uterine Prolapse	מין ושתן	NULL	618
+צניחת שלפוחית	Bladder Prolapse	מין ושתן	NULL	618.2
+הרטבה	"Enuresis (primary, secondary, nonorganic origin"	מין ושתן	TRUE	307.6
+הרטבת לילה	Enuresis Nocturnal	מין ושתן	NULL	788.36
+אין אונות	Impotence	מין ושתן	TRUE	302.72
+העדר זיקפה אורגני	Impotence organic	מין ושתן	NULL	607.8
+העדר זיקפה פסיכוגני	Impotence psychogenic	מין ושתן	NULL	302.7
+בעיות בזיקפה	Erectile disorders	מין ושתן	TRUE	
+הפרעה בתפקוד מיני	Problems with sexual function	מין ושתן	TRUE	V417
+בעיות בתפקוד מיני	Sexual Disorders	מין ושתן	NULL	302.9
+כאבים ביחסי מין	Dyspareunia NOS	מין ושתן	TRUE	625
+שאלות לגבי אמצעי מניעה	Consultation Contraception	מין ושתן	NULL	V15.7
+שאלות לגבי מחלות מין	Consultation Sex T Disease STD	מין ושתן	NULL	V65.45
+ארוע איסכמי מוחי חולף	Transient Ischemic Attack	נוירולוגיה	NULL	435
+ארוע מוחי	Brain stroke	נוירולוגיה	NULL	431
+בלבול	Confusion	נוירולוגיה	TRUE	298.2
+דליריום	Delirium	נוירולוגיה	NULL	293
+סחרחורת	Vertiginous Syndrome	נוירולוגיה	NULL	386
+הפרעת תחושה	Dyseathesia	נוירולוגיה	TRUE	782
+רעד	Tremor	נוירולוגיה	TRUE	781
+מחלת פרקינסון	Parkinson's Disease	נוירולוגיה	NULL	332
+מחלה דמיאלינטיבית	Chronic inflamatory demyelinating polyneuritis	נוירולוגיה	NULL	375.81
+טרשת נפוצה	Multiple sclerosis	נוירולוגיה	NULL	340
+הפרעת קשב וריכוז ילדים	Attention Deficit Disorder of childhood	נוירולוגיה	NULL	314
+הפרעותריכוז וקשב כללי	Attention Deficit Disorder	נוירולוגיה	NULL	781.3
+מחלת מנייר	Meniere's disease	נוירולוגיה	NULL	386
+מנינגיומה	Meningioma of brain or spinal cord benign	נוירולוגיה	NULL	225.2
+הפרעה בהליכה	Abnormal gait / gait disorder	נוירולוגיה	TRUE	781.2
+הפרעה בקואורדינציה	Lack of coordination	נוירולוגיה	TRUE	781.3
+אפאזיה	Aphasia	נוירולוגיה	TRUE	784.3
+אלקסיה ודיסלקסיה	Alexia and dyslexia	נוירולוגיה	TRUE	784.61
+מנינגיסמוס	Meningismus	נוירולוגיה	NULL	781.6
+הפרעות טעם וריח	Disturbances of sensation of smell and taste	נוירולוגיה	TRUE	781.1
+גמגום	Stuttering	נוירולוגיה	TRUE	307
+הפרעה בבלוטת ההיפופיזה	Disorders of the pituitary gland	אנדוקרינולוגיה ומטבולית	NULL	253
+תת פעילות בלוטת התריס	Hypothyroidism	אנדוקרינולוגיה ומטבולית	NULL	244.9
+יתר פעילות בלוטת התריס	Thyrotoxicosis	אנדוקרינולוגיה ומטבולית	NULL	242
+זפק	"Goiter, unspecified"	אנדוקרינולוגיה ומטבולית	TRUE	240.9
+דלקת בלוטת התריס	Thyroiditis	אנדוקרינולוגיה ומטבולית	NULL	245
+היפרפאראטירואידיזם	Hyperparathyroidism	אנדוקרינולוגיה ומטבולית	NULL	252
+היפופאראטירואידיזם	Hypoparathyroidism	אנדוקרינולוגיה ומטבולית	NULL	252.1
+סכרת	Diabetes Melitus	אנדוקרינולוגיה ומטבולית	NULL	250
+סכרת התלויה באינסולין	Insulin Dependant DM	אנדוקרינולוגיה ומטבולית	NULL	250.01
+מחלתקושינג	Cushing's syndrome	אנדוקרינולוגיה ומטבולית	NULL	255
+מחלת אדיסון	Addisonn's disease	אנדוקרינולוגיה ומטבולית	NULL	255.4
+אוסטאופורוזיס	Osteoporosis	אנדוקרינולוגיה ומטבולית	NULL	V17.81
+שגדון	Gout	אנדוקרינולוגיה ומטבולית	NULL	274.9
+תת תפקוד האשכים	Other testicular hypofunction	אנדוקרינולוגיה ומטבולית	NULL	257.2
+שחלות פוליציסטיות	Polycystic ovaries	אנדוקרינולוגיה ומטבולית	NULL	256.4
+התבגרות מיניתמוקדמת	Precocious sexual development and puberty	אנדוקרינולוגיה ומטבולית	NULL	259.1
+שיעור יתר	Hirsituism	אנדוקרינולוגיה ומטבולית	TRUE	704.1
+אי סדירות מחזור הוסת	Irregular Menstrual Bleeding	אנדוקרינולוגיה ומטבולית	TRUE	626.4
+סימפטומים מנופאוזליים	Post menopausal symptoms	אנדוקרינולוגיה ומטבולית	TRUE	627.2
+חסר ויטמין B12	Vitamin B12 Deficiency	אנדוקרינולוגיה ומטבולית	NULL	281.1
+חסר ויטמין D	Vitamin D deficiency	אנדוקרינולוגיה ומטבולית	NULL	268
+חסר חומצה פולית	Folic acid deficiency	אנדוקרינולוגיה ומטבולית	NULL	281.2
+חסר G6PD	Glucose-6-phosphatase deficiency	אנדוקרינולוגיה ומטבולית	NULL	271
+זיהום ויראלי	Virus infection unspacified	מחלות זיהומיות	NULL	799 / A77
+זיהום ויראלי עם פריחה	Viral disease accompanied by exanthem	מחלות זיהומיות	NULL	050-059
+פריחה	Rash and other nonspecific skin eruption	מחלות זיהומיות	TRUE	782.1
+שפעת	Influenza	מחלות זיהומיות	NULL	487
+אדמת	Rubella	מחלות זיהומיות	NULL	56
+אבעבועות רוח	Varicella (Chicken Pox)	מחלות זיהומיות	NULL	V01.71 / 052
+שלבת חוגרת	Herpes Zoster	מחלות זיהומיות	NULL	53
+סקרלטינה	Scarlet Fever	מחלות זיהומיות	NULL	34.1
+רוזאולה אינפנטום (המחלה השישית)	Roseola infantum	מחלות זיהומיות	NULL	58.1
+חצבת	Measles	מחלות זיהומיות	NULL	V73.2
+שעלת	Whooping cough / pertusis	מחלות זיהומיות	NULL	33
+זיהום ב-EBV	Infectious Mononucleosis	מחלות זיהומיות	NULL	75
+זיהום בציטומגלו וירוס	Cytomegaloviral disease	מחלות זיהומיות	NULL	78.5
+פיטיריאזיס רוזאה	Pityriasis Rosea	מחלות זיהומיות	NULL	696.3
+זיהום כלמידיה	Other venereal diseases due to Chlamydia trachomatis	מחלות זיהומיות	NULL	99.5
+זיהום על ידי ריקציה	Rickettsial Infections	מחלות זיהומיות	NULL	83
+דלקת קרום המוח	Meningitis	מחלות זיהומיות	NULL	N71
+דלקת רקמת המוח	Encephalitis	מחלות זיהומיות	NULL	N71
+דלקת לחמית	Conjunctivitis	מחלות זיהומיות	NULL	372
+סינוסיטיס חריפה	"Sinusitis, Acure"	מחלות זיהומיות	NULL	461
+זיהום דרכי נשימה עליונות	URI	מחלות זיהומיות	NULL	465
+דלקת אוזן חצונית	Otitis Externa	מחלות זיהומיות	NULL	380.1
+דלקת אוזן תיכונה	Otitis Media	מחלות זיהומיות	NULL	381
+דלקת לוע חריפה	Acute Pharyngitis	מחלות זיהומיות	NULL	462
+דלקת שקדיים חריפה	Acute Tonsilitis	מחלות זיהומיות	NULL	465
+דלקת ריאות	Pneumonia	מחלות זיהומיות	NULL	R81
+דלקת ריאות אטיפית	Atypical pneumonia	מחלות זיהומיות	NULL	483
+דלקת מעי זיהומית	Gastroenteritis (septic)	מחלות זיהומיות	NULL	9
+דינזטריה / שיגלוזיס	Shigellosis / dysentery	מחלות זיהומיות	NULL	4
+הרעלת מזון (חיידקית)	Food poisoning (bacterial)	מחלות זיהומיות	NULL	5
+צהבת A	Hepatitis A	מחלות זיהומיות	NULL	70.1
+צהבת B	Hepatitis B	מחלות זיהומיות	NULL	70.3
+צהבת C	Hepatitis C	מחלות זיהומיות	NULL	70.7
+צהבת כרונית	Chronic hepatitis	מחלות זיהומיות	NULL	571.4
+זיהום דרכי השתן	Urinary Tract Infection	מחלות זיהומיות	NULL	599
+מחלה זיהומית מועברת ביחסי מין	Sexually Transmited Disease	מחלות זיהומיות	NULL	V65.45
+מחלת פה ידיים ורגליים	Hand mouth foot syndrome	מחלות זיהומיות	NULL	743
+ספור משפחתי של ממאירות	Family history of malignant neoplasm	ממאירות	NULL	V16
+שד	Malignant neoplasm of female breast	ממאירות	NULL	174.9
+ערמונית	Malignant neoplasm of prostate	ממאירות	NULL	185
+מעי גס	Malignant neoplasm of colon	ממאירות	NULL	174
+ריאות	"Malignant neoplasm of trachea, bronchus, and lung"	ממאירות	NULL	185
+מוח	Malignant neoplasm of brain	ממאירות	NULL	153
+ושט	Malignant neoplasm of esophagus	ממאירות	NULL	162
+לבלב	Malignant neoplasm of pancreas	ממאירות	NULL	191
+רחם	Malignant neoplasm of uterus	ממאירות	NULL	150
+כבד	Malignant neoplasm of liver	ממאירות	NULL	157
+כליה	Malignant neoplasm of stomach	ממאירות	NULL	179
+קיבה	Malignant neoplasm of kidney	ממאירות	NULL	155
+אשך	Malignant neoplasm of testis	ממאירות	NULL	189
+מלנומה	Malignant melanoma of skin	ממאירות	NULL	151
+שחלה	Malignant neoplasm of ovary	ממאירות	NULL	186
+אדרנל	Malignant neoplasm of adrenal	ממאירות	NULL	172
+שחלות	Malignant neoplasm of ovary	ממאירות	NULL	183
+בלוטת התריס	Malignant neoplasm of thyroid gland	ממאירות	NULL	193
+שלפוחית השתן	Malignant neoplasm of bladder	ממאירות	NULL	171
+ממאירות אחרת	Other neoplasms	ממאירות	NULL	V16.9
+מיאלומה נפוצה	Multiple myeloma	ממאירות	NULL	188
+גרורות לבלוטות לימפה	Lymph node metastasis	ממאירות	NULL	V76.8
+מחלת הודג'קינס	Hodgkin's disease / lymphoma	ממאירות	NULL	201.9
+לימפומה שאינה הודג'קינס	Non Hodgkin's lymphoma	ממאירות	NULL	202
+גרורות	Secondary malignant neoplasm of other specified sites	ממאירות	NULL	198
+גרורות	Metastasis	ממאירות	NULL	198
+הפרעה נפשית והתנהגותית	Mental and behavioral problem	פסיכיאטריה	TRUE	V40
+אנורקסיה	Anorexia nervosa	פסיכיאטריה	NULL	307.1
+בולימיה	Bulimia nervosa	פסיכיאטריה	NULL	307.51
+הפרעות ריכוז וקשב	Attention deficit disorder	פסיכיאטריה	NULL	314
+ציקלוטימיה	Cyclothymia	פסיכיאטריה	NULL	301.13
+דכאון	Depressive disorder	פסיכיאטריה	NULL	311
+מחלה ביפולארית	Bipolar disorder	פסיכיאטריה	NULL	296.8
+חרדה	Anxiety	פסיכיאטריה	TRUE	300
+דכאון וחרדה	Anxiety and depression	פסיכיאטריה	TRUE	300.4
+תסמונת חרדה	General anxiety disorder	פסיכיאטריה	NULL	300.02
+סכיזופרניה	Schyzophrenia	פסיכיאטריה	NULL	295
+הפרעת אישיות	Personality disorder	פסיכיאטריה	NULL	301
+נסיון אבדני	Suicidal attempt	פסיכיאטריה	NULL	E950-E959
+תסמונת סטרס פוסט טראומה	PTSD	פסיכיאטריה	NULL	309.81
+הפרעות שינה	Insomnia / sleep disturbances	פסיכיאטריה	TRUE	780.5
+מחלה במשפחה	Problems with family members NEC	פסיכו-סוציו	TRUE	V61.4
+הפרעה משפחתית	Family disruption	פסיכו-סוציו	TRUE	V61.0
+אלמנות	Widow/Widower	פסיכו-סוציו	TRUE	
+יתמות	Orphancy	פסיכו-סוציו	TRUE	
+שכול	"Bereavement, uncomplicated"	פסיכו-סוציו	TRUE	V62.82
+תסמונת הקן המתרוקן	Empty nest syndrome	פסיכו-סוציו	TRUE	Z60.0
+תגובת אבל	Grief reaction	פסיכו-סוציו	TRUE	309
+עצבות	Sadness	פסיכו-סוציו	TRUE	
+בדידות	Lonelyness	פסיכו-סוציו	TRUE	
+הזנחה	Abuse and neglect	פסיכו-סוציו	TRUE	V71.81
+הזנחת ילד	Child maltreatment syndrome	פסיכו-סוציו	TRUE	995.5
+הזנחת חסר ישע	Abandonment or neglect of infants and helpless persons	פסיכו-סוציו	TRUE	E904.0
+הזנחה נפשית	History of emotional abuse / neglect	פסיכו-סוציו	TRUE	V15.42
+רגשות שליליים	Negative feelings	פסיכו-סוציו	TRUE	
+תסמונת לב שבור	Broken heart syndrome	פסיכו-סוציו	TRUE	492.83
+בעיית נסיבות חיים	Life circumstance problems	פסיכו-סוציו	TRUE	V62.89
+חיי מתח	Other stressful life events affecting family and household	פסיכו-סוציו	TRUE	Z63.7
+הפרעה ביפולארית	Bipolar disorder	פסיכו-סוציו	TRUE	296.8
+דכאון	Depressive disorder	פסיכו-סוציו	TRUE	311
+חרדה	Anxiety NOS	פסיכו-סוציו	TRUE	F41.9
+הפרעות אכילה	Eating Disorders	פסיכו-סוציו	TRUE	307.5
+אנורקסיה	Anorexia	פסיכו-סוציו	TRUE	307.1
+בולימיה	Bulemia	פסיכו-סוציו	TRUE	307.51
+סיכון אובדני	Suicidal tendendy	פסיכו-סוציו	TRUE	300.9
+אינסומניה	Insomnia	פסיכו-סוציו	TRUE	307.42
+אלכוהוליזם	Alcohol Abuse	פסיכו-סוציו	TRUE	305
+שימוש בחשיש	Cannabis Abuse	פסיכו-סוציו	TRUE	305.2
+שימוש בתרופות משככות כאב	Sedative Abuse	פסיכו-סוציו	TRUE	305.4
+שימוש בהלוצינוגנים	hallucinogen Abuse	פסיכו-סוציו	TRUE	305.3
+התמכרות לסמים	Drug dpendence	פסיכו-סוציו	TRUE	304
+בעיה ביחסי הורה ילד	parent-child Relational Problem	פסיכו-סוציו	TRUE	V61.20
+בעיית התייחסות זוגית	partner relational problem	פסיכו-סוציו	TRUE	V61.1
+בעייה בהתייחסות אחאית	sibling relational problem	פסיכו-סוציו	TRUE	V61.8
+אי שליטה במתן שתן	Enuresis	פסיכו-סוציו	TRUE	307.6
+אי שליטה במתן צואה	Encopresis	פסיכו-סוציו	TRUE	307.7
+הפרעות מסוג טיק	Tic Disorder NOS	פסיכו-סוציו	TRUE	307.2
+היפוכונדריאזיס	Hypochondriasis	פסיכו-סוציו	TRUE	300.7
+חולשה	Weakness	פסיכו-סוציו	TRUE	780.9
+עייפות	Fatigue	פסיכו-סוציו	TRUE	780.7
+הפרעות זיכרון	Memory Disturbance	פסיכו-סוציו	TRUE	310.8
+פלפיטציות	Palpitations	פסיכו-סוציו	TRUE	785.1
+יעוץ מצבי מתח	Stress Counseling	פסיכו-סוציו	TRUE	
+התנהגות אגרסיבית	"Aggressive, dissocial or defiant behaviour"	פסיכו-סוציו	TRUE	F92
+תגובה אגרסיבית	Aggressive outburst / Anger reaction	פסיכו-סוציו	TRUE	312
+התנהגות אובססיבית קומפולסיבית	Obsessive Compulsive Disorder	פסיכו-סוציו	TRUE	300.3
+הפרעת הסתגלות	Adjustment Disorder	פסיכו-סוציו	TRUE	309.9
+סומטיזציה	Somatization	פסיכו-סוציו	TRUE	300.81
+הפרעות אישיות	Personality disorder NOS	פסיכו-סוציו	TRUE	301.9
+אישיות גבולית	Borderline personality disorder	פסיכו-סוציו	TRUE	301.83
+התנהגות נרקיסיסטית	Narcissistic personality disorder	פסיכו-סוציו	TRUE	301.8
+NULL	NULL	NULL	NULL	NULL
