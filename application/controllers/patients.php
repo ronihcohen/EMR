@@ -10,7 +10,11 @@ class Patients extends CI_Controller
 	}
 
 	function index(){
-	$this->load->view('showPatients');
+		$this->load->view('showPatients');
+	}
+	function diagnosis($id){ // diagnosis per patient
+		$res=$this->Patients_model->diagnosis($id);
+		print_r($res);
 	}
 
 	function oper(){

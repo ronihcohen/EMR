@@ -34,6 +34,18 @@ class Patients_model extends CI_Model
 		$this->db->where('id', $id);
 		$this->db->update('patients', $data);
 	}
+	function diagnosis($id){ // diagnosis per patient
+		$this->db->select('*');
+		$this->db->from('patients_diagnosis');
+		$this->db->join('diagnosis', 'patients_diagnosis.diagnosis_id = diagnosis.id');
+		$this->db->where('patients_id',$id);
+
+		$query = $this->db->get();
+
+		return $query->result();
+
+	}
+
 
 };
 
