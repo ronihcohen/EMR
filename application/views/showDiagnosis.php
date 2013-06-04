@@ -1,38 +1,32 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
 <head>
-
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>jqGrid/css/ui-lightness/jquery-ui-1.10.3.custom.css" />
-
-    <link type="text/css" href="<?php echo base_url()?>jqGrid/css/ui.jqgrid.css" rel="stylesheet" />
-
-    <link type="text/css" href="<?php echo base_url()?>jqGrid/css/plugins/searchFilter.css" rel="stylesheet" />
-
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            font-size: 75%;
-        }
-    </style>
-
-    <script type="text/javascript" src="<?php echo base_url(); ?>jqGrid/js/jquery-1.9.0.min.js"></script>
-
-    <script type="text/javascript" src="<?php echo base_url(); ?>jqGrid/js/i18n/grid.locale-en.js"></script>
-
-    <script type="text/javascript" src="<?php echo base_url(); ?>jqGrid/js/jquery.jqGrid.min.js"></script>
-
-
     <title>Codeigniter With JQGrid</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>jqGrid/css/redmond/jquery-ui-1.10.3.custom.css" />
+    <link type="text/css" href="<?php echo base_url()?>jqGrid/css/ui.jqgrid.css" rel="stylesheet" />
+  
+    <script type="text/javascript" src="<?php echo base_url(); ?>jqGrid/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>jqGrid/js/i18n/grid.locale-en.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>jqGrid/js/jquery.jqGrid.min.js"></script>
+    
+    <style type="text/css">
+
+    </style>
 </head>
+
 <body>
-    <center>
-        <h1>Codeigniter With JQGrid</h1>
+    
+        <h1>Diagnosis</h1>
     <?php
         $ci =& get_instance();
         $base_url = base_url();
     ?>
     <table id="list"></table><!--Grid table-->
     <div id="pager"></div>  <!--pagination div-->
-    </center>
+  
 </body>
 
 
@@ -42,13 +36,13 @@
                 url:'<?=$base_url.'index.php/diagnosis/loadData'?>',      //another controller function for generating data
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
-                colNames:['id','english_name'],       //Grid column headings
+                colNames:['hebrew_name','english_name'],       //Grid column headings
                 colModel:[
-                    {name:'id',index:'id', width:100, align:"left"},
-                    {name:'english_name',index:'english_name', width:150, align:"left"},
+                    {name:'hebrew_name',index:'hebrew_name', width:100, align:"left"},
+                    {name:'hebrew_name',index:'english_name', width:150, align:"left"},
                 ],
-                rowNum:10,
-                width: 750,
+                rowNum: 20,
+                width: 800,
                 //height: 300,
                 rowList:[10,20,30],
                 pager: '#pager',
@@ -56,7 +50,8 @@
                 viewrecords: true,
                 rownumbers: true,
                 gridview: true,
-                caption:"List Of Person"
+                caption:"Diagnosis"
             }).navGrid('#pager',{edit:false,add:false,del:false});
         });
 </script>
+</html>

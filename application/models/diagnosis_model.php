@@ -3,7 +3,7 @@
 class Diagnosis_model extends CI_Model
 {
 	function getAllData($start,$limit,$sidx,$sord,$where){
-	    $this->db->select('id,english_name');
+	    $this->db->select('id,hebrew_name,english_name');
 	    $this->db->limit($limit);
 	    if($where != NULL)
 	        $this->db->where($where,NULL,FALSE);
