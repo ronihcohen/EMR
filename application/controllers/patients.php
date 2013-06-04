@@ -1,20 +1,24 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Diagnosis extends CI_Controller
+class Patients extends CI_Controller
 {
 	function __construct() {
 	    parent::__construct();
-	    $this->load->model('Diagnosis_model');
+	    $this->load->model('Patients_model');
 	    $this->load->helper('url');
 	    $this->load->database();
 	}
 
 	function index(){
-	$this->load->view('showDiagnosis');
+	$this->load->view('showPatients');
 	}
 
-	function del(){
-	$this->load->view('showDiagnosis');
+	function oper(){
+	if($_POST['oper'] == 'del')
+		{
+			$id=$_POST['id'];
+ 			$this->db->delete('patients', array('id' => $id));
+		}
 	}
 
 	function loadData(){
@@ -63,7 +67,7 @@ class Diagnosis extends CI_Controller
 
 	    if(!$sidx) 
 	        $sidx =1;
-	    $count = $this->db->count_all_results('diagnosis'); 
+	    $count = $this->db->count_all_results('patients'); 
 	    if( $count > 0 ) {
 	        $total_pages = ceil($count/$limit);    
 	    } else {
@@ -72,7 +76,7 @@ class Diagnosis extends CI_Controller
 
 	    if ($page > $total_pages) 
 	        $page=$total_pages;
-	    $query = $this->Diagnosis_model->getAllData($start,$limit,$sidx,$sord,$where); 
+	    $query = $this->Patients_model->getAllData($start,$limit,$sidx,$sord,$where); 
 	    $responce = new stdClass();
 	    $responce->page = $page;
 	    $responce->total = $total_pages;
@@ -80,7 +84,7 @@ class Diagnosis extends CI_Controller
 	    $i=0;
 	    foreach($query as $row) {
 	        $responce->rows[$i]['id']=$row->id;
-	        $responce->rows[$i]['cell']=array($row->hebrew_name,$row->english_name);
+	        $responce->rows[$i]['cell']=array($row->first_name,$row->last_name);
 	        $i++;
 	    }
 

@@ -19,7 +19,7 @@
 
 <body>
     
-        <h1>Diagnosis</h1>
+        <h1>Patients</h1>
     <?php
         $ci =& get_instance();
         $base_url = base_url();
@@ -33,13 +33,13 @@
 <script type="text/javascript">
         $(document).ready(function (){
             jQuery("#list").jqGrid({
-                url:'<?=$base_url.'index.php/diagnosis/loadData'?>',      //another controller function for generating data
+                url:'<?=$base_url.'index.php/patients/loadData'?>',      //another controller function for generating data
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
-                colNames:['hebrew_name','english_name'],       //Grid column headings
+                colNames:['first_name','last_name'],       //Grid column headings
                 colModel:[
-                    {name:'hebrew_name',index:'hebrew_name', editable: false, required: false},
-                    {name:'english_name',index:'english_name', editable: false, required: false},
+                    {name:'first_name',index:'first_name', editable: true, required: true},
+                    {name:'last_name',index:'last_name', editable: true, required: true},
                 ],
                 rowNum: 20,
                 width: 800,
@@ -50,9 +50,9 @@
                 viewrecords: true,
                 rownumbers: true,
                 gridview: true,
-                editurl: '<?=$base_url.'index.php/diagnosis/del'?>',
-                caption:"Diagnosis"
-            }).navGrid('#pager',{edit:false,add:false,del:false});
+                editurl: '<?=$base_url.'index.php/patients/oper'?>',
+                caption:"Patients"
+            }).navGrid('#pager',{edit:true,add:true,del:true});
         });
 </script>
 </html>
