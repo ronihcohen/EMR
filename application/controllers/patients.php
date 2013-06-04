@@ -16,8 +16,15 @@ class Patients extends CI_Controller
 	function oper(){
 	if($_POST['oper'] == 'del')
 		{
-			$id=$_POST['id'];
- 			$this->db->delete('patients', array('id' => $id));
+ 			$this->Patients_model->del($_POST['id']);
+		}
+	if($_POST['oper'] == 'add')
+		{
+ 			$this->Patients_model->add($_POST['first_name'],$_POST['last_name']);
+		}
+	if($_POST['oper'] == 'edit')
+		{
+ 			$this->Patients_model->edit($_POST['first_name'],$_POST['last_name'],$_POST['id']);
 		}
 	}
 

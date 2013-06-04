@@ -12,4 +12,29 @@ class Patients_model extends CI_Model
 
 	    return $query->result();
 	}
+
+	function del($id){
+		$this->db->delete('patients', array('id' => $id));
+	}
+
+	function add($first_name,$last_name){
+		$data = array(
+   			'first_name' =>$first_name ,
+  			'last_name' => $last_name ,
+  		);
+
+		$this->db->insert('patients', $data); 
+	}
+	function edit($first_name,$last_name,$id){
+		$data = array(
+   			'first_name' =>$first_name ,
+  			'last_name' => $last_name ,
+		);
+
+		$this->db->where('id', $id);
+		$this->db->update('patients', $data);
+	}
+
 };
+
+
