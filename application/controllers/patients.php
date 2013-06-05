@@ -32,7 +32,8 @@ class Patients extends CI_Controller
 		}
 	}
 
-	function loadData(){
+
+	function gridData(){
 	    $page = isset($_POST['page'])?$_POST['page']:1; 
 	    $limit = isset($_POST['rows'])?$_POST['rows']:10; 
 	    $sidx = isset($_POST['sidx'])?$_POST['sidx']:'id'; 

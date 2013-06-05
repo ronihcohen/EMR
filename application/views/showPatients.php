@@ -24,7 +24,7 @@
         $ci =& get_instance();
         $base_url = base_url();
     ?>
-    <table id="list"></table><!--Grid table-->
+    <table id="patients"></table><!--Grid table-->
     <div id="pager"></div>  <!--pagination div-->
   
 </body>
@@ -32,8 +32,8 @@
 
 <script type="text/javascript">
         $(document).ready(function (){
-            jQuery("#list").jqGrid({
-                url:'<?=$base_url.'index.php/patients/loadData'?>',      //another controller function for generating data
+            jQuery("#patients").jqGrid({
+                url:'<?=$base_url.'index.php/patients/gridData'?>',      //another controller function for generating data
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
                 colNames:['first_name','last_name'],       //Grid column headings
@@ -43,6 +43,7 @@
                 ],
                 rowNum: 20,
                 width: 800,
+                search:false,
            //     height: '100%',
            //     rowList:[10,20,30],
                 pager: '#pager',
@@ -52,7 +53,7 @@
                 gridview: true,
                 editurl: '<?=$base_url.'index.php/patients/oper'?>',
                 caption:"Patients"
-            }).navGrid('#pager',{edit:true,add:true,del:true});
+            }).navGrid('#pager',{edit:true,add:true,del:true,search:false});
         });
 </script>
 </html>
