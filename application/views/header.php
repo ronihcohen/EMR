@@ -22,8 +22,8 @@
         <div class="right_header">
             
             <div class="top_menu">
-            <a href="#" class="login">login</a>
-            <a href="#" class="sign_up">signup</a>
+            <a href="<?php echo base_url(); ?>index.php/auth/login" class="login">login</a>
+            <a href="<?php echo base_url(); ?>index.php/auth/logout" class="sign_up">logout</a>
             </div>
         
             <div id="menu">
@@ -38,11 +38,5 @@
         </div>
     
     </div>
-    
-    
 
-    
-    
-
-    
-    <div id="main_content">
+    <div id="main_content"> <br/>
