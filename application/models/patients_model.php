@@ -40,7 +40,7 @@ class Patients_model extends CI_Model
 		$this->db->join('diagnosis', 'patients_diagnosis.diagnosis_id = diagnosis.id');
 		$this->db->where('patients_id',$id);
 
-		$query = $this->db->get();
+	    $query = $this->db->get();
 
 		return $query->result();
 
