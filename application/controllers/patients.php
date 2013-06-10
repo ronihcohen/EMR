@@ -169,4 +169,11 @@ class Patients extends CI_Controller
 
 	    echo json_encode($responce);
 	}
+
+	function DiagnosisPerPatient($patientID){
+	$data = array(
+               'patientID' => $patientID,
+          );
+	$this->load->view('DiagnosisPerPatient',$data);
+	}
 }

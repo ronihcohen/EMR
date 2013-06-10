@@ -9,7 +9,7 @@ class Diagnosis extends CI_Controller
 	    $this->load->database();
 	}
 
-	function index($patientID){
+	function index(){
 	$this->load->view('showDiagnosis');
 	}
 

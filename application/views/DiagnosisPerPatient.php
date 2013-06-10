@@ -19,28 +19,21 @@
 
 <body>
     
-        <h3>Plaese select diagnosis for patient <?=$patientID?></h3>
+        <h1>Diagnosis for Patient <?=$patientID?></h1> 
     <?php
         $ci =& get_instance();
         $base_url = base_url();
-
-        if (!empty($diagnosisID)){
-            echo ("<h4>Diagnosis ".$diagnosisID." added !</h4>");
-        }
     ?>
-
     <table id="list"></table><!--Grid table-->
     <div id="pager"></div>  <!--pagination div-->
-  <br/>
-  <a href='<?=$base_url.'index.php/patients/DiagnosisPerPatient/'?><?=$patientID?>'>View Patients <?=$patientID?> Diagnosis</a><br>
-  <a href='<?=$base_url.'index.php/patients'?>'>Back to Patients</a>
+  
 </body>
 
 
 <script type="text/javascript">
         $(document).ready(function (){
             jQuery("#list").jqGrid({
-                url:'<?=$base_url.'index.php/diagnosis/loadData'?>',      //another controller function for generating data
+                url:'<?=$base_url.'index.php/patients/diagnosisData/'?><?=$patientID?>',
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
                 colNames:['hebrew_name','english_name'],       //Grid column headings
@@ -58,10 +51,7 @@
                 rownumbers: true,
                 gridview: true,
                 editurl: '<?=$base_url.'index.php/diagnosis/del'?>',
-                caption:"Diagnosis",
-                 onSelectRow: function(id){ 
-                    window.location.replace ('<?=$base_url.'index.php/diagnosis/addDiagnosisToPatient/'?><?=$patientID?>/'+id);
-                 },
+                caption:"Diagnosis"
             }).navGrid('#pager',{edit:false,add:false,del:false});
         });
 </script>
