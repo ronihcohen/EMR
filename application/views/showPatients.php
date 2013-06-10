@@ -25,7 +25,10 @@
         $base_url = base_url();
     ?>
     <table id="patients"></table><!--Grid table-->
-    <div id="pager"></div>  <!--pagination div-->
+    <div id="patients_pager"></div>  <!--pagination div-->
+
+    <table id="diagnosis"></table><!--Grid table-->
+    <div id="diagnosis_pager"></div>  <!--pagination div-->
   
 </body>
 
@@ -52,8 +55,43 @@
                 rownumbers: true,
                 gridview: true,
                 editurl: '<?=$base_url.'index.php/patients/oper'?>',
-                caption:"Patients"
-            }).navGrid('#pager',{edit:true,add:true,del:true,search:false});
+                caption:"Patients",
+
+                onSelectRow: function(ids) {
+                        jQuery("#diagnosis").jqGrid('setGridParam',{url:'<?=$base_url.'index.php/patients/diagnosisData/'?>'+ids});
+                        jQuery("#diagnosis").jqGrid('setCaption',"Diagnosis for patient "+ids)
+                        .trigger('reloadGrid');
+                    }
+
+            }).navGrid('#patients_pager',{edit:true,add:true,del:true,search:false});
+        });
+</script>
+
+
+<script type="text/javascript">
+        $(document).ready(function (){
+            jQuery("#diagnosis").jqGrid({
+                url:'<?=$base_url.'index.php/patients/diagnosisData/0'?>',      //another controller function for generating data
+                mtype : "post",             //Ajax request type. It also could be GET
+                datatype: "json",            //supported formats XML, JSON or Arrray
+                colNames:['hebrew_name','english_name'],       //Grid column headings
+                colModel:[
+                    {name:'hebrew_name',index:'hebrew_name', editable: false, required: false},
+                    {name:'english_name',index:'english_name', editable: false, required: false},
+                ],
+                rowNum: 20,
+                width: 800,
+           //     height: '100%',
+           //     rowList:[10,20,30],
+                pager: '#pager',
+                sortname: 'id',
+                viewrecords: true,
+                rownumbers: true,
+                gridview: true,
+                editurl: '<?=$base_url.'index.php/diagnosis/del'?>',
+                caption:"Diagnosis"
+
+            }).navGrid('#diagnosis_pager',{edit:false,add:false,del:false});
         });
 </script>
 </html>

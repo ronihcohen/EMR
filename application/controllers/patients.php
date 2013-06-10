@@ -12,12 +12,7 @@ class Patients extends CI_Controller
 	function index(){
 		$this->load->view('showPatients');
 	}
-	function diagnosis($id){
-		$data = array(
-               'id' => $id,
-          );
-		$this->load->view('PatientsDiagnosis', $data);
-	}
+
 	function oper(){
 	if($_POST['oper'] == 'del')
 		{
