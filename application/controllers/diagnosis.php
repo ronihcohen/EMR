@@ -21,10 +21,13 @@ class Diagnosis extends CI_Controller
 	}
 
 	function addDiagnosisToPatient($patientID,$diagnosisID){
-	$data = array(
+	if (!empty($diagnosisID)){
+		$data = array(
                'patientID' => $patientID,
                'diagnosisID' => $diagnosisID,
-          );
+         );
+		$this->Diagnosis_model->addDiagnosisToPatient($patientID,$diagnosisID);
+	}
 	$this->load->view('DiagnosisToPatient',$data);
 	}
 

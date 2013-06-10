@@ -12,4 +12,14 @@ class Diagnosis_model extends CI_Model
 
 	    return $query->result();
 	}
+
+	function addDiagnosisToPatient($patientID,$diagnosisID){
+		$data = array(
+   			'patients_id' =>$patientID ,
+  			'diagnosis_id' => $diagnosisID ,
+  		);
+
+		$this->db->insert('patients_diagnosis', $data);
+	}
+
 };
