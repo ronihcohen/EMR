@@ -26,8 +26,7 @@
     ?>
     <table id="list"></table><!--Grid table-->
     <div id="pager"></div>  <!--pagination div-->
-    <br>
-    <a href='<?=$base_url.'index.php/patients'?>'>Back to Patients</a>
+  
   
 </body>
 

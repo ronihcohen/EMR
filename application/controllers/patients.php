@@ -9,13 +9,15 @@ class Patients extends CI_Controller
 	    $this->load->database();
 
 	    $this->load->library('tank_auth');
-	    
+
 	    if (!$this->tank_auth->is_logged_in()) 
 			redirect('/auth/login/');
 	}
 
 	function index(){
+		$this->load->view('header');
 		$this->load->view('showPatients');
+		$this->load->view('footer');
 	}
 
 	function oper(){
@@ -179,6 +181,9 @@ class Patients extends CI_Controller
 	$data = array(
                'patientID' => $patientID,
           );
-	$this->load->view('DiagnosisPerPatient',$data);
+
+	$this->load->view('header');
+		$this->load->view('DiagnosisPerPatient',$data);
+	$this->load->view('footer');
 	}
 }

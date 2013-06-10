@@ -19,21 +19,23 @@
 
 <body>
     
-        <h3>Plaese select diagnosis for patient <?=$patientID?></h3>
+<h3>Plaese select diagnosis for patient <?=$patientID?>
+</h3>
+
     <?php
         $ci =& get_instance();
         $base_url = base_url();
 
         if (!empty($diagnosisID)){
-            echo ("<h4>Diagnosis ".$diagnosisID." added !</h4>");
+            echo ("<h4>Diagnosis ".$diagnosisID." added - ");
         }
     ?>
+    <a href='<?=$base_url.'index.php/patients/DiagnosisPerPatient/'?><?=$patientID?>'>View Patient </a></h4>
 
     <table id="list"></table><!--Grid table-->
     <div id="pager"></div>  <!--pagination div-->
   <br/>
-  <a href='<?=$base_url.'index.php/patients/DiagnosisPerPatient/'?><?=$patientID?>'>View Patients <?=$patientID?> Diagnosis</a><br>
-  <a href='<?=$base_url.'index.php/patients'?>'>Back to Patients</a>
+
 </body>
 
 

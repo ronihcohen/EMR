@@ -15,14 +15,19 @@ class Diagnosis extends CI_Controller
 	}
 
 	function index(){
-	$this->load->view('showDiagnosis');
+		$this->load->view('header');
+			$this->load->view('showDiagnosis');
+		$this->load->view('footer');
 	}
 
 	function DiagnosisToPatient($patientID){
 	$data = array(
                'patientID' => $patientID,
           );
-	$this->load->view('DiagnosisToPatient',$data);
+	$this->load->view('header');
+		$this->load->view('DiagnosisToPatient',$data);
+	$this->load->view('footer');
+	
 	}
 
 	function addDiagnosisToPatient($patientID,$diagnosisID){
@@ -33,7 +38,9 @@ class Diagnosis extends CI_Controller
          );
 		$this->Diagnosis_model->addDiagnosisToPatient($patientID,$diagnosisID);
 	}
-	$this->load->view('DiagnosisToPatient',$data);
+	$this->load->view('header');
+		$this->load->view('DiagnosisToPatient',$data);
+	$this->load->view('footer');
 	}
 
 	function loadData(){
