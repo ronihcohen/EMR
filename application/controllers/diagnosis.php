@@ -9,12 +9,23 @@ class Diagnosis extends CI_Controller
 	    $this->load->database();
 	}
 
-	function index(){
+	function index($patientID){
 	$this->load->view('showDiagnosis');
 	}
 
-	function del(){
-	$this->load->view('showDiagnosis');
+	function DiagnosisToPatient($patientID){
+	$data = array(
+               'patientID' => $patientID,
+          );
+	$this->load->view('DiagnosisToPatient',$data);
+	}
+
+	function addDiagnosisToPatient($patientID,$diagnosisID){
+	$data = array(
+               'patientID' => $patientID,
+               'diagnosisID' => $diagnosisID,
+          );
+	$this->load->view('DiagnosisToPatient',$data);
 	}
 
 	function loadData(){

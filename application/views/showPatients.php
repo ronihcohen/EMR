@@ -59,7 +59,7 @@
                     var subgrid_table_id, pager_id;
                     subgrid_table_id = subgrid_id+"_t";
                     pager_id = "p_"+subgrid_table_id;
-                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table>");
+                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/diagnosis/DiagnosisToPatient/'?>"+row_id+"'>Add diagnosis</a>");
                     jQuery("#"+subgrid_table_id).jqGrid({
                         url:'<?=$base_url.'index.php/patients/diagnosisData/'?>'+row_id,
                         datatype: "json",
