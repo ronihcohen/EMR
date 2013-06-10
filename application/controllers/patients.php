@@ -7,6 +7,11 @@ class Patients extends CI_Controller
 	    $this->load->model('Patients_model');
 	    $this->load->helper('url');
 	    $this->load->database();
+
+	    $this->load->library('tank_auth');
+	    
+	    if (!$this->tank_auth->is_logged_in()) 
+			redirect('/auth/login/');
 	}
 
 	function index(){
@@ -163,7 +168,7 @@ class Patients extends CI_Controller
 	    $i=0;
 	    foreach($query as $row) {
 	        $responce->rows[$i]['id']=$row->id;
-	        $responce->rows[$i]['cell']=array($row->english_name,$row->hebrew_name);
+	        $responce->rows[$i]['cell']=array($row->english_name,$row->hebrew_name,$row->date);
 	        $i++;
 	    }
 

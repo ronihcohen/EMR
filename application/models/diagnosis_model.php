@@ -17,6 +17,7 @@ class Diagnosis_model extends CI_Model
 		$data = array(
    			'patients_id' =>$patientID ,
   			'diagnosis_id' => $diagnosisID ,
+ 
   		);
 
 		$this->db->insert('patients_diagnosis', $data);

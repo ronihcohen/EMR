@@ -7,6 +7,11 @@ class Diagnosis extends CI_Controller
 	    $this->load->model('Diagnosis_model');
 	    $this->load->helper('url');
 	    $this->load->database();
+
+	    $this->load->library('tank_auth');
+	    
+	    if (!$this->tank_auth->is_logged_in()) 
+			redirect('/auth/login/');
 	}
 
 	function index(){

@@ -26,6 +26,8 @@
     ?>
     <table id="list"></table><!--Grid table-->
     <div id="pager"></div>  <!--pagination div-->
+    <br>
+    <a href='<?=$base_url.'index.php/patients'?>'>Back to Patients</a>
   
 </body>
 
@@ -36,10 +38,11 @@
                 url:'<?=$base_url.'index.php/patients/diagnosisData/'?><?=$patientID?>',
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
-                colNames:['hebrew_name','english_name'],       //Grid column headings
+                colNames:['hebrew_name','english_name','date'],       //Grid column headings
                 colModel:[
                     {name:'hebrew_name',index:'hebrew_name', editable: false, required: false},
                     {name:'english_name',index:'english_name', editable: false, required: false},
+                    {name:'date',index:'date', editable: false, required: false},
                 ],
                 rowNum: 20,
                 width: 800,

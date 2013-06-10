@@ -64,10 +64,11 @@
                         url:'<?=$base_url.'index.php/patients/diagnosisData/'?>'+row_id,
                         datatype: "json",
                         mtype : "post",
-                            colNames:['hebrew_name','english_name'],       //Grid column headings
+                            colNames:['hebrew_name','english_name','date'],       //Grid column headings
                             colModel:[
                                 {name:'hebrew_name',index:'hebrew_name', editable: false, required: false},
                                 {name:'english_name',index:'english_name', editable: false, required: false},
+                                {name:'date',index:'date', editable: false, required: false},
                             ],
                         sortname: 'num',
                         sortorder: "asc",
