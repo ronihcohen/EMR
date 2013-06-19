@@ -8,7 +8,7 @@ class Patients extends CI_Controller
 	    $this->load->helper('url');
 	    $this->load->database();
 
-	    $this->load->library('tank_auth');
+	    $this->load->library('tank_auth_groups','','tank_auth');
 
 	    if (!$this->tank_auth->is_logged_in()) 
 			redirect('/auth/login/');
@@ -16,7 +16,9 @@ class Patients extends CI_Controller
 
 	function index(){
 		$this->load->view('header');
-		$this->load->view('showPatients');
+		if ($this->tank_auth->is_admin()) 
+			$this->load->view('showPatients');	
+		else $this->load->view('notAuthorized');
 		$this->load->view('footer');
 	}
 
