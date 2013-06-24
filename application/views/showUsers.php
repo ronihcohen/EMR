@@ -3,8 +3,8 @@
 
         <h2>Users</h2>
 
+    <?php if ($user_id<>0) echo $user_id ?>
 
-        
     <?php
         $ci =& get_instance();
         $base_url = base_url();
@@ -47,7 +47,7 @@
                     var subgrid_table_id, pager_id;
                     subgrid_table_id = subgrid_id+"_t";
                     pager_id = "p_"+subgrid_table_id;
-                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/diagnosis/DiagnosisToPatient/'?>"+row_id+"'>Add diagnosis</a>");
+                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/admin/index/'?>"+row_id+"'>Add Permissions</a>");
                     jQuery("#"+subgrid_table_id).jqGrid({
                         url:'<?=$base_url.'index.php/admin/permissionsData/'?>'+row_id,
                         datatype: "json",

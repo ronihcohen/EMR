@@ -18,13 +18,15 @@ class Admin extends CI_Controller
 			redirect('/auth/login/');
 	}
 
-	function index(){ //ManageUsers
+	function index($user_id=0){ //ManageUsers
+		if ($user_id<>0)
+			$data=array('user_id'=>$user_id);
 		$this->load->view('header',$this->userData);
 		if ($this->tank_auth->is_admin()) 
 			$this->load->view('adminMenu');
 		if ($this->Permissions->
 			authorized($this->session->userdata('group_id'),"ManageUsers")) 
-			$this->load->view('showUsers');	
+			$this->load->view('showUsers',$data);	
 		else $this->load->view('notAuthorized');
 		$this->load->view('footer');
 	}
