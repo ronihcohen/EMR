@@ -1,3 +1,5 @@
+, here you can register new users.
+<br/><br/>
 <?php
 if ($use_username) {
 	$username = array(

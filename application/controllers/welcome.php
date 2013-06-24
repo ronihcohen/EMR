@@ -15,6 +15,8 @@ class Welcome extends CI_Controller
 		if (!$this->tank_auth->is_logged_in()) {
 			redirect('/auth/login/');
 		} else {
+			if ($this->tank_auth->is_admin())
+				redirect('/admin', 'refresh');
 			redirect('/patients', 'refresh');
 		}
 	}

@@ -11,6 +11,8 @@ class Auth extends CI_Controller
 		$this->load->library('security');
 		$this->load->library('tank_auth_groups','','tank_auth');
 		$this->lang->load('tank_auth');
+		if ($this->tank_auth->is_logged_in())
+		$this->userData = $this->tank_auth->setUserData();
 	}
 
 	function index()
@@ -165,7 +167,7 @@ class Auth extends CI_Controller
 						}
 						unset($data['password']); // Clear password (just for any case)
 
-						$this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Login'));
+						$this->_show_message($this->lang->line('auth_message_registration_completed_2').' '.anchor('/auth/login/', 'Go Back'));
 					}
 				} else {
 					$errors = $this->tank_auth->get_error_message();
@@ -183,7 +185,7 @@ class Auth extends CI_Controller
 			$data['captcha_registration'] = $captcha_registration;
 			$data['use_recaptcha'] = $use_recaptcha;
 
-			$this->load->view('header');
+			$this->load->view('header',$this->userData);
 			if ($this->tank_auth->is_admin()) 
 				$this->load->view('auth/register_form', $data);	
 			else $this->load->view('notAuthorized');
