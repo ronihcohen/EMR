@@ -26,11 +26,12 @@ class Admin_model extends CI_Model
 		$this->db->where('id', $id);
 		$this->db->update('users', $data);
 	}
-	function diagnosis($id){ // diagnosis per patient
+	function permissions($id){ // permissions per users
 		$this->db->select('*');
-		$this->db->from('patients_diagnosis');
-		$this->db->join('diagnosis', 'patients_diagnosis.diagnosis_id = diagnosis.id');
-		$this->db->where('patients_id',$id);
+		$this->db->from('users');
+		$this->db->join('permissions_groups', 'permissions_groups.group_id = users.group_id');
+		$this->db->join('permissions', 'permissions_groups.permission_id = permissions.id');
+		$this->db->where('users.id',$id);
 
 	    $query = $this->db->get();
 

@@ -111,7 +111,7 @@ class Admin extends CI_Controller
 	    echo json_encode($responce);
 	}
 
-	function diagnosisData($id){ // diagnosis per patient{
+	function permissionsData($id){ // permissions per users{
 	    $page = isset($_POST['page'])?$_POST['page']:1; 
 	    $limit = isset($_POST['rows'])?$_POST['rows']:10; 
 	    $sidx = isset($_POST['sidx'])?$_POST['sidx']:'id'; 
@@ -157,7 +157,7 @@ class Admin extends CI_Controller
 
 	    if(!$sidx) 
 	        $sidx =1;
-	    $count = $this->db->count_all_results('patients'); 
+	    $count = $this->db->count_all_results('permissions'); 
 	    if( $count > 0 ) {
 	        $total_pages = ceil($count/$limit);    
 	    } else {
@@ -166,7 +166,7 @@ class Admin extends CI_Controller
 
 	    if ($page > $total_pages) 
 	        $page=$total_pages;
-	    $query = $this->Patients_model->diagnosis($id); 
+	    $query = $this->Admin_model->permissions($id); 
 	    
 	    $responce = new stdClass();
 	    $responce->page = $page;
@@ -175,7 +175,7 @@ class Admin extends CI_Controller
 	    $i=0;
 	    foreach($query as $row) {
 	        $responce->rows[$i]['id']=$row->id;
-	        $responce->rows[$i]['cell']=array($row->english_name,$row->hebrew_name,$row->date);
+	        $responce->rows[$i]['cell']=array($row->name);
 	        $i++;
 	    }
 

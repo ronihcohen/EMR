@@ -43,7 +43,25 @@
                 caption:"Users",
                 subGrid: true,
 
-
+                subGridRowExpanded: function(subgrid_id, row_id) {
+                    var subgrid_table_id, pager_id;
+                    subgrid_table_id = subgrid_id+"_t";
+                    pager_id = "p_"+subgrid_table_id;
+                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/diagnosis/DiagnosisToPatient/'?>"+row_id+"'>Add diagnosis</a>");
+                    jQuery("#"+subgrid_table_id).jqGrid({
+                        url:'<?=$base_url.'index.php/admin/permissionsData/'?>'+row_id,
+                        datatype: "json",
+                        mtype : "post",
+                            colNames:['Permissions Name'],       //Grid column headings
+                            colModel:[
+                                {name:'name',index:'name', editable: false, required: false},
+                               
+                            ],
+                        sortname: 'num',
+                        sortorder: "asc",
+                        height: '100%'
+                    });
+                },
 
             }).navGrid('#users_pager',{edit:true,add:false,del:true});
         });
