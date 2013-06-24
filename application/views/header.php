@@ -17,7 +17,9 @@
 <body>
 <div id="main_container">
     <div class="header">
-        <div id="logo"><a href="index.html"><img src="<?php echo base_url(); ?>theme/images/logo.png" alt="" title="" width="162" height="54" border="0" /></a></div>
+        <div id="logo">
+            <img src="<?php echo base_url(); ?>theme/images/logo.png" alt="" title="" width="162" height="54" border="0" />
+        </div>
     
         <div class="right_header">
             
@@ -40,3 +42,11 @@
     </div>
 
     <div id="main_content"> <br/>
+
+        <?php 
+        if ($this->tank_auth->is_logged_in()) {
+        ?>
+
+             Hello  <b><?=$groupName?></b> <?=$username?>
+
+        <?php } ?>

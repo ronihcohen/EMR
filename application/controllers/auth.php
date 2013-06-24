@@ -118,16 +118,7 @@ class Auth extends CI_Controller
 	 */
 	function register()
 	{
-		if ($this->tank_auth->is_logged_in()) {									// logged in
-			redirect('');
 
-		} elseif ($this->tank_auth->is_logged_in(FALSE)) {						// logged in, not activated
-			redirect('/auth/send_again/');
-
-		} elseif (!$this->config->item('allow_registration', 'tank_auth')) {	// registration is off
-			$this->_show_message($this->lang->line('auth_message_registration_disabled'));
-
-		} else {
 			$use_username = $this->config->item('use_username', 'tank_auth');
 			if ($use_username) {
 				$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|min_length['.$this->config->item('username_min_length', 'tank_auth').']|max_length['.$this->config->item('username_max_length', 'tank_auth').']|alpha_dash');
@@ -193,10 +184,12 @@ class Auth extends CI_Controller
 			$data['use_recaptcha'] = $use_recaptcha;
 
 			$this->load->view('header');
-				$this->load->view('auth/register_form', $data);
+			if ($this->tank_auth->is_admin()) 
+				$this->load->view('auth/register_form', $data);	
+			else $this->load->view('notAuthorized');
 			$this->load->view('footer');
 		
-		}
+		
 	}
 
 	/**

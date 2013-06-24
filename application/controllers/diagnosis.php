@@ -8,14 +8,15 @@ class Diagnosis extends CI_Controller
 	    $this->load->helper('url');
 	    $this->load->database();
 
-	    $this->load->library('tank_auth');
-	    
+	    $this->load->library('tank_auth_groups','','tank_auth');
+	    $this->userData = $this->tank_auth->setUserData();
+
 	    if (!$this->tank_auth->is_logged_in()) 
 			redirect('/auth/login/');
 	}
 
 	function index(){
-		$this->load->view('header');
+		$this->load->view('header',$this->userData);
 			$this->load->view('showDiagnosis');
 		$this->load->view('footer');
 	}
@@ -24,7 +25,7 @@ class Diagnosis extends CI_Controller
 	$data = array(
                'patientID' => $patientID,
           );
-	$this->load->view('header');
+	$this->load->view('header',$this->userData);
 		$this->load->view('DiagnosisToPatient',$data);
 	$this->load->view('footer');
 	
@@ -38,7 +39,7 @@ class Diagnosis extends CI_Controller
          );
 		$this->Diagnosis_model->addDiagnosisToPatient($patientID,$diagnosisID);
 	}
-	$this->load->view('header');
+	$this->load->view('header',$this->userData);
 		$this->load->view('DiagnosisToPatient',$data);
 	$this->load->view('footer');
 	}

@@ -16,6 +16,7 @@ class Tank_auth_groups extends Tank_auth {
 
 		//Load the groups extension model in place of 'users'
 		$this->ci->load->model('tank_auth/ta_groups_users','ta_groups_users');
+        $this->ci->load->model('Groups');
 		$this->ci->users = $this->ci->ta_groups_users;
     }
     
@@ -62,8 +63,13 @@ class Tank_auth_groups extends Tank_auth {
 		return $loggedIn;
     }
 
-     function find_group_member()
-    {
-        return $this->ci->session->userdata('group_id');
+    function setUserData() {
+        $data = array(
+               'groupName' => 
+               $this->ci->Groups->getGroupName($this->ci->session->userdata('group_id')),
+               'username' =>
+               $this->ci->session->userdata('username')
+        );
+        return $data;
     }
 }

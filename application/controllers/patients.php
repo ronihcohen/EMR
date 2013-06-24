@@ -5,17 +5,20 @@ class Patients extends CI_Controller
 	function __construct() {
 	    parent::__construct();
 	    $this->load->model('Patients_model');
+	    
 	    $this->load->helper('url');
 	    $this->load->database();
 
 	    $this->load->library('tank_auth_groups','','tank_auth');
+	    $this->userData = $this->tank_auth->setUserData();
 
 	    if (!$this->tank_auth->is_logged_in()) 
 			redirect('/auth/login/');
 	}
 
 	function index(){
-		$this->load->view('header');
+
+		$this->load->view('header',$this->userData);
 		if ($this->tank_auth->is_admin()) 
 			$this->load->view('showPatients');	
 		else $this->load->view('notAuthorized');
@@ -184,7 +187,7 @@ class Patients extends CI_Controller
                'patientID' => $patientID,
           );
 
-	$this->load->view('header');
+	$this->load->view('header',$this->userData);
 		$this->load->view('DiagnosisPerPatient',$data);
 	$this->load->view('footer');
 	}
