@@ -5,6 +5,6 @@ class Groups extends CI_Model
 	function getGroupName($id){
 	    $query = $this->db->get_where
 	    ('groups', array('id' => $id));
-	    return $query->row()->name;
+	    return $query->row()->group_name;
 	}
 };

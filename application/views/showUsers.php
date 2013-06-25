@@ -22,10 +22,12 @@
                 url:'<?=$base_url.'index.php/admin/usersData'?>',      //another controller function for generating data
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
-                colNames:['username','group_id'],       //Grid column headings
+                colNames:['username','group_id','group_name'],       //Grid column headings
                 colModel:[
                     {name:'username',index:'username', editable: true, required: true},
                     {name:'group_id',index:'group_id', editable: true, required: true},
+                    {name:'group_name',index:'group_name', editable: false, required: false},
+             
                 ],
                 rowNum: 20,
                 width: 800,

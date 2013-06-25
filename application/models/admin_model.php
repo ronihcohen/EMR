@@ -3,11 +3,12 @@
 class Admin_model extends CI_Model
 {
 	function getAllData($start,$limit,$sidx,$sord,$where){
-	    $this->db->select('id,username,group_id');
+	    $this->db->select('*');
 	    $this->db->limit($limit);
 	    if($where != NULL)
 	        $this->db->where($where,NULL,FALSE);
-	    $this->db->order_by($sidx,$sord);
+	   // $this->db->order_by($sidx,$sord);
+	    $this->db->join('groups', 'groups.id = users.group_id');
 	    $query = $this->db->get('users',$limit,$start);
 
 	    return $query->result();

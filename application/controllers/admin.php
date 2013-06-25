@@ -104,7 +104,7 @@ class Admin extends CI_Controller
 	    $i=0;
 	    foreach($query as $row) {
 	        $responce->rows[$i]['id']=$row->id;
-	        $responce->rows[$i]['cell']=array($row->username,$row->group_id);
+	        $responce->rows[$i]['cell']=array($row->username,$row->group_id,$row->group_name);
 	        $i++;
 	    }
 
