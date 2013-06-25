@@ -28,11 +28,10 @@ class Admin_model extends CI_Model
 		$this->db->update('users', $data);
 	}
 	function permissions($id){ // permissions per users
-		$this->db->select('*');
-		$this->db->from('users');
-		$this->db->join('permissions_groups', 'permissions_groups.group_id = users.group_id');
-		$this->db->join('permissions', 'permissions_groups.permission_id = permissions.id');
-		$this->db->where('users.id',$id);
+		$this->db->select('permissions.name');
+		$this->db->from('permissions_groups');
+		$this->db->join('permissions', 'permissions.id = permissions_groups.permission_id');
+		$this->db->where('permissions_groups.group_id',$id);
 
 	    $query = $this->db->get();
 
