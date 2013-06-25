@@ -3,7 +3,6 @@
 
         <h2>Users</h2>
 
-    <?php if ($user_id<>0) echo $user_id ?>
 
     <?php
         $ci =& get_instance();
