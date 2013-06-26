@@ -20,6 +20,8 @@ class Patients extends CI_Controller
 
 	function index(){ //PatientsWithDiagnosis
 		$this->load->view('header',$this->userData);
+		if ($this->tank_auth->is_admin()) 
+			$this->load->view('adminMenu');
 		if ($this->Permissions->
 			authorized($this->session->userdata('group_id'),"PatientsWithDiagnosis")) 
 			$this->load->view('showPatients');	

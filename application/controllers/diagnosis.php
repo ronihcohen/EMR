@@ -17,6 +17,8 @@ class Diagnosis extends CI_Controller
 
 	function index(){
 		$this->load->view('header',$this->userData);
+		if ($this->tank_auth->is_admin()) 
+			$this->load->view('adminMenu');
 			$this->load->view('showDiagnosis');
 		$this->load->view('footer');
 	}

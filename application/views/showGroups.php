@@ -57,7 +57,7 @@
                     var subgrid_table_id, pager_id;
                     subgrid_table_id = subgrid_id+"_t";
                     pager_id = "p_"+subgrid_table_id;
-                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/admin/groups/addpermission/'?>"+row_id+"'>Add Permissions</a>");
+                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/admin/groups/addpermission/'?>"+row_id+"'>Add Permissions</a> | Select to Delete");
                     jQuery("#"+subgrid_table_id).jqGrid({
                         url:'<?=$base_url.'index.php/admin/permissionsData/group/'?>'+row_id,
                         datatype: "json",
