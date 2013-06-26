@@ -14,6 +14,17 @@ class Admin_model extends CI_Model
 	    return $query->result();
 	}
 
+	function get_groups($start,$limit,$sidx,$sord,$where){
+	    $this->db->select('*');
+	    $this->db->limit($limit);
+	    if($where != NULL)
+	        $this->db->where($where,NULL,FALSE);
+	    $this->db->order_by($sidx,$sord);
+	    $query = $this->db->get('groups',$limit,$start);
+
+	    return $query->result();
+	}
+
 	function delUser($id){
 		$this->db->delete('users', array('id' => $id));
 	}
@@ -33,6 +44,18 @@ class Admin_model extends CI_Model
 		$this->db->join('permissions', 'permissions.id = permissions_groups.permission_id');
 		$this->db->join('users', 'users.group_id = permissions_groups.group_id');
 		$this->db->where('users.id',$id);
+
+	    $query = $this->db->get();
+
+		return $query->result();
+
+	}
+
+	function permissionsPerGroups($id){ // permissions per groups
+		$this->db->select('permissions.name');
+		$this->db->from('permissions_groups');
+		$this->db->join('permissions', 'permissions.id = permissions_groups.permission_id');
+		$this->db->where('permissions_groups.group_id',$id);
 
 	    $query = $this->db->get();
 
