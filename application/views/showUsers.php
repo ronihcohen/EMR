@@ -3,8 +3,6 @@
 
         <h2>Users and permissions</h2>
         <p>
-You can change user permissions by changing his group id. <br/>
-Administrators - 100 , Doctors - 300 , Secretary - 200.
 
 
     <?php
@@ -25,11 +23,11 @@ Administrators - 100 , Doctors - 300 , Secretary - 200.
                 url:'<?=$base_url.'index.php/admin/usersData'?>',      //another controller function for generating data
                 mtype : "post",             //Ajax request type. It also could be GET
                 datatype: "json",            //supported formats XML, JSON or Arrray
-                colNames:['username','group_id','group_name'],       //Grid column headings
+                colNames:['Group Name','Username','Group ID'],       //Grid column headings
                 colModel:[
-                    {name:'username',index:'username', editable: true, required: true},
-                    {name:'group_id',index:'group_id', editable: true, required: true},
                     {name:'group_name',index:'group_name', editable: false, required: false},
+                    {name:'username',index:'username', editable: true, required: true},
+                    {name:'group_id',index:'group_id', editable: true, required: true, edittype:"select",editoptions:{value:"100:Admin;300:Doctor;200:Secretary"}},
              
                 ],
                 rowNum: 20,
@@ -43,7 +41,7 @@ Administrators - 100 , Doctors - 300 , Secretary - 200.
                 viewrecords: true,
                 rownumbers: false,
                 gridview: true,
-                editurl: '<?=$base_url.'index.php/admin/oper'?>',
+                editurl: '<?=$base_url.'index.php/admin/userOper'?>',
                 caption:"Users",
                 subGrid: true,
 

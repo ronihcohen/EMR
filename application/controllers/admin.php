@@ -29,10 +29,10 @@ class Admin extends CI_Controller
 		$this->load->view('footer');
 	}
 
-	function oper(){
+	function userOper(){
 	if($_POST['oper'] == 'del')
 		{
- 			$this->Admin_model->del($_POST['id']);
+ 			$this->Admin_model->delUser($_POST['id']);
 		}
 	if($_POST['oper'] == 'edit')
 		{
@@ -96,7 +96,7 @@ class Admin extends CI_Controller
 
 	    if ($page > $total_pages) 
 	        $page=$total_pages;
-	    $query = $this->Admin_model->getAllData($start,$limit,$sidx,$sord,$where); 
+	    $query = $this->Admin_model->get_users($start,$limit,$sidx,$sord,$where); 
 	    $responce = new stdClass();
 	    $responce->page = $page;
 	    $responce->total = $total_pages;
@@ -104,7 +104,7 @@ class Admin extends CI_Controller
 	    $i=0;
 	    foreach($query as $row) {
 	        $responce->rows[$i]['id']=$row->id;
-	        $responce->rows[$i]['cell']=array($row->username,$row->group_id,$row->group_name);
+	        $responce->rows[$i]['cell']=array($row->group_name,$row->username,$row->group_id);
 	        $i++;
 	    }
 
@@ -166,7 +166,7 @@ class Admin extends CI_Controller
 
 	    if ($page > $total_pages) 
 	        $page=$total_pages;
-	    $query = $this->Admin_model->permissions($id); 
+	    $query = $this->Admin_model->permissionsPerUsers($id); 
 	    
 	    $responce = new stdClass();
 	    $responce->page = $page;

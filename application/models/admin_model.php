@@ -2,7 +2,7 @@
 
 class Admin_model extends CI_Model
 {
-	function getAllData($start,$limit,$sidx,$sord,$where){
+	function get_users($start,$limit,$sidx,$sord,$where){
 	    $this->db->select('users.id as id,username,groups.id as group_id,groups.group_name');
 	    $this->db->limit($limit);
 	    if($where != NULL)
@@ -14,7 +14,7 @@ class Admin_model extends CI_Model
 	    return $query->result();
 	}
 
-	function del($id){
+	function delUser($id){
 		$this->db->delete('users', array('id' => $id));
 	}
 
@@ -27,7 +27,7 @@ class Admin_model extends CI_Model
 		$this->db->where('id', $id);
 		$this->db->update('users', $data);
 	}
-	function permissions($id){ // permissions per users
+	function permissionsPerUsers($id){ // permissions per users
 		$this->db->select('permissions.name');
 		$this->db->from('permissions_groups');
 		$this->db->join('permissions', 'permissions.id = permissions_groups.permission_id');
