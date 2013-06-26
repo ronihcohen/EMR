@@ -29,13 +29,16 @@ class Admin extends CI_Controller
 		$this->load->view('footer');
 	}
 
-	function groups(){ //Manage Groups
+	function groups($oper='',$addToGroup_id=''){ //Manage Groups
+		if ($oper=='addpermission' and $addToGroup_id!='')
+			$data = array ('addToGroup_id'=>$addToGroup_id);
+		else $data=array();
 		$this->load->view('header',$this->userData);
 		if ($this->tank_auth->is_admin()) 
 			$this->load->view('adminMenu');
 		if ($this->Permissions->
 			authorized($this->session->userdata('group_id'),"ManageGroups")) 
-			$this->load->view('showGroups');	
+			$this->load->view('showGroups',$data);	
 		else $this->load->view('notAuthorized');
 		$this->load->view('footer');
 	}
@@ -192,7 +195,7 @@ class Admin extends CI_Controller
 	    echo json_encode($responce);
 	}
 
-	function permissionsData($usergroup,$id){ // permissions per users{
+	function permissionsData($type,$id=0){ // permissions per users{
 	    $page = isset($_POST['page'])?$_POST['page']:1; 
 	    $limit = isset($_POST['rows'])?$_POST['rows']:10; 
 	    $sidx = isset($_POST['sidx'])?$_POST['sidx']:'id'; 
@@ -248,11 +251,13 @@ class Admin extends CI_Controller
 	    if ($page > $total_pages) 
 	        $page=$total_pages;
 
-	    if ($usergroup=='group')
+	    if ($type=='group')
 	    $query = $this->Admin_model->permissionsPerGroups($id); 
-		else
+		elseif ($type=='user')
 		$query = $this->Admin_model->permissionsPerUsers($id);
-	    
+	    elseif ($type=='all')
+	    $query = $this->Admin_model->permissions();
+
 	    $responce = new stdClass();
 	    $responce->page = $page;
 	    $responce->total = $total_pages;

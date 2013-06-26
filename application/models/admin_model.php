@@ -60,7 +60,13 @@ class Admin_model extends CI_Model
 	    $query = $this->db->get();
 
 		return $query->result();
+	}
 
+	function permissions(){ // permissions per groups
+		$this->db->select('*');
+		$this->db->from('permissions');
+	    $query = $this->db->get();
+		return $query->result();
 	}
 
 

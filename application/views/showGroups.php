@@ -48,7 +48,7 @@
                     var subgrid_table_id, pager_id;
                     subgrid_table_id = subgrid_id+"_t";
                     pager_id = "p_"+subgrid_table_id;
-                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table>");
+                    $("#"+subgrid_id).html("<table id='"+subgrid_table_id+"' class='scroll'></table><a href='<?=$base_url.'index.php/admin/groups/addpermission/'?>"+row_id+"'>Add Permissions</a>");
                     jQuery("#"+subgrid_table_id).jqGrid({
                         url:'<?=$base_url.'index.php/admin/permissionsData/group/'?>'+row_id,
                         datatype: "json",
@@ -67,5 +67,52 @@
             }).navGrid('#group_pager',{edit:true,add:false,del:true});
         });
 </script>
+
+
+
+
+<?php
+if (isset($addToGroup_id) and $addToGroup_id!='') {
+?>
+
+    <script type="text/javascript">
+        $(document).ready(function (){
+            jQuery("#permissions").jqGrid({
+                url:'<?=$base_url.'index.php/admin/permissionsData/all'?>',      //another controller function for generating data
+                mtype : "post",             //Ajax request type. It also could be GET
+                datatype: "json",            //supported formats XML, JSON or Arrray
+                colNames:['Permission Name'],       //Grid column headings
+                colModel:[
+                    {name:'name',index:'name', editable: false, required: false},
+             
+                ],
+                rowNum: 20,
+                width: 800,
+                height: '100%',
+                search:false,
+                scrollOffset: 0,
+                rowList:[10,20,30],
+                pager: '#permissions_pager',
+                sortname: 'id',
+                viewrecords: true,
+                rownumbers: false,
+                gridview: true,
+                caption:"Select Permission adding to group <?=$addToGroup_id?>",
+                 onSelectRow: function(id){ 
+                    window.location.replace ('<?=$base_url.'index.php/admin/groups/addpermission/'?><?=$addToGroup_id?>/'+id);
+                 },
+            }).navGrid('#permissions_pager',{edit:false,add:false,del:false});
+        });
+    </script>
+
+    <br/> <br/>
+
+    <table id="permissions"></table><!--Grid table-->
+    <div id="permissions_pager"></div>  <!--pagination div-->
+
+<?php
+}
+?>
+
 
     
