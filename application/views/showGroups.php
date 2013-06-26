@@ -72,7 +72,7 @@
 
 
 <?php
-if (isset($addToGroup_id) and $addToGroup_id!='') {
+if (isset($group_id) and $group_id!='') {
 ?>
 
     <script type="text/javascript">
@@ -97,9 +97,9 @@ if (isset($addToGroup_id) and $addToGroup_id!='') {
                 viewrecords: true,
                 rownumbers: false,
                 gridview: true,
-                caption:"Select Permission adding to group <?=$addToGroup_id?>",
+                caption:"Select Permission adding to group <?=$group_id?>",
                  onSelectRow: function(id){ 
-                    window.location.replace ('<?=$base_url.'index.php/admin/groups/addpermission/'?><?=$addToGroup_id?>/'+id);
+                    window.location.replace ('<?=$base_url.'index.php/admin/groups/addpermission/'?><?=$group_id?>/'+id);
                  },
             }).navGrid('#permissions_pager',{edit:false,add:false,del:false});
         });

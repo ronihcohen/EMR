@@ -69,6 +69,14 @@ class Admin_model extends CI_Model
 		return $query->result();
 	}
 
+	function addPermissionToGroup($group_id,$permission_id){
+		$data = array(
+		   'group_id' => $group_id ,
+		   'permission_id' => $permission_id ,
+		);
+
+		$this->db->insert('permissions_groups', $data); 
+	}
 
 };
 

@@ -29,9 +29,12 @@ class Admin extends CI_Controller
 		$this->load->view('footer');
 	}
 
-	function groups($oper='',$addToGroup_id=''){ //Manage Groups
-		if ($oper=='addpermission' and $addToGroup_id!='')
-			$data = array ('addToGroup_id'=>$addToGroup_id);
+	function groups($oper='',$group_id='',$permission_id=''){ //Manage Groups
+		if ($oper=='addpermission' and $group_id!=''){
+			$data = array ('group_id'=>$group_id);
+			if ($permission_id!='')
+				$this->Admin_model->addPermissionToGroup($group_id,$permission_id);
+		}
 		else $data=array();
 		$this->load->view('header',$this->userData);
 		if ($this->tank_auth->is_admin()) 
