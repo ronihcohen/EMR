@@ -42,6 +42,15 @@
                 gridview: true,
                 editurl: '<?=$base_url.'index.php/admin/groupOper'?>',
                 caption:"Groups",
+                
+
+                    <?php
+                    if (isset($oper) and $oper=='add') {
+                    ?>
+                        hiddengrid: true,
+                    <?php
+                    }
+                    ?>
                 subGrid: true,
 
                 subGridRowExpanded: function(subgrid_id, row_id) {
@@ -60,7 +69,10 @@
                             ],
                         sortname: 'num',
                         sortorder: "asc",
-                        height: '100%'
+                        height: '100%',
+                        onSelectRow: function(id){ 
+                         window.location.replace ('<?=$base_url.'index.php/admin/groups/delpermission/'?>'+row_id+'/'+id);
+                         },
                     });
                 },
 
@@ -72,7 +84,7 @@
 
 
 <?php
-if (isset($group_id) and $group_id!='') {
+if (isset($group_id) and $group_id!='' and isset($oper) and $oper=='add') {
 ?>
 
     <script type="text/javascript">

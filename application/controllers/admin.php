@@ -31,11 +31,20 @@ class Admin extends CI_Controller
 
 	function groups($oper='',$group_id='',$permission_id=''){ //Manage Groups
 		if ($oper=='addpermission' and $group_id!=''){
-			$data = array ('group_id'=>$group_id);
-			if ($permission_id!='')
+			$data = array ('group_id'=>$group_id,
+							'oper'=>'add');
+			if ($permission_id!='') {
 				$this->Admin_model->addPermissionToGroup($group_id,$permission_id);
+				redirect('/admin/groups', 'refresh');
+			}
+		}
+		elseif ($oper=='delpermission' and $group_id!='' and $permission_id!=''){
+				$this->Admin_model->delPermissionFromGroup($group_id,$permission_id);
+				redirect('/admin/groups', 'refresh');
+			
 		}
 		else $data=array();
+
 		$this->load->view('header',$this->userData);
 		if ($this->tank_auth->is_admin()) 
 			$this->load->view('adminMenu');
@@ -267,7 +276,7 @@ class Admin extends CI_Controller
 	    $responce->records = $count;
 	    $i=0;
 	    foreach($query as $row) {
-	    //    $responce->rows[$i]['id']=$row->id;
+	        $responce->rows[$i]['id']=$row->id;
 	        $responce->rows[$i]['cell']=array($row->name);
 	        $i++;
 	    }
@@ -275,13 +284,5 @@ class Admin extends CI_Controller
 	    echo json_encode($responce);
 	}
 
-	function DiagnosisPerPatient($patientID){
-	$data = array(
-               'patientID' => $patientID,
-          );
 
-	$this->load->view('header',$this->userData);
-		$this->load->view('DiagnosisPerPatient',$data);
-	$this->load->view('footer');
-	}
 }
